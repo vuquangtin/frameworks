@@ -5,7 +5,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.classic.Session;
+//import org.hibernate.classic.Session;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Restrictions;
 
@@ -42,12 +42,12 @@ public class TblSMSQueueHome extends GenericHibernateDAO<TblSMSQueue, Long> {
 		Transaction transaction = null;
 		try {
 			SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
-			Session session = sessionFactory.getCurrentSession();
-			transaction = session.beginTransaction();
-			for (int i = 0; i < obj.size(); i++) {
-				session.saveOrUpdate(obj.get(i));
-			}
-			session.flush();
+			//Session session = sessionFactory.getCurrentSession();
+			// transaction = session.beginTransaction();
+			// for (int i = 0; i < obj.size(); i++) {
+			// session.saveOrUpdate(obj.get(i));
+			// }
+			// session.flush();
 			transaction.commit();
 		} catch (RuntimeException re) {
 			transaction.rollback();

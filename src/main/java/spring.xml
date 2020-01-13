@@ -2,12 +2,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
-
-
 	<bean name="myJob"
 		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
-		<property name="jobClass"
-			value="complexspringquartzexample.scheduler.MyJob" />
+		<property name="jobClass" value="complexspringquartzexample.scheduler.MyJob" />
 		<property name="jobDataAsMap">
 			<map>
 				<entry key="jobState" value-ref="jobInputData" />
@@ -15,8 +12,7 @@
 		</property>
 		<property name="durability" value="true" />
 	</bean>
-	<bean name="jobInputData"
-		class="complexspringquartzexample.scheduler.MyJobInput">
+	<bean name="jobInputData" class="complexspringquartzexample.scheduler.MyJobInput">
 		<property name="processData">
 			<list value-type="java.lang.String">
 				<value>This</value>
@@ -27,13 +23,11 @@
 			</list>
 		</property>
 	</bean>
-
 	<bean id="cronTrigger"
 		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
 		<property name="jobDetail" ref="myJob" />
 		<property name="cronExpression" value="0/3 * * * * ?" />
 	</bean>
-
 	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
 		<property name="triggers">
 			<list>
@@ -46,5 +40,4 @@
 			</list>
 		</property>
 	</bean>
-
 </beans>

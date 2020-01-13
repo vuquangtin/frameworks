@@ -1,12 +1,9 @@
 package com.quartz.smssendmt.model;
 
-import javax.security.auth.login.Configuration;
-
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
 
 /**
  * 
@@ -14,6 +11,7 @@ import org.hibernate.cfg.Configuration;
  * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
  * @version 1.0.0
  * @see <a href="https://github.com/vuquangtin/frameworks">https://github.com/
+
  *      vuquangtin/frameworks</a>
  *
  */
@@ -34,8 +32,9 @@ public class HibernateUtils {
 
 	static {
 		try {
-			Configuration dbConfig = new Configuration().configure("hibernate.cfg.xml");
-			sessionFactory = dbConfig.buildSessionFactory();
+			// Configuration dbConfig = new
+			// Configuration().configure("hibernate.cfg.xml");
+			// sessionFactory = dbConfig.buildSessionFactory();
 		} catch (Throwable ex) {
 			log.error(ex);
 			ex.printStackTrace();
@@ -75,8 +74,9 @@ public class HibernateUtils {
 	public static Session getCurrentSession() {
 		if (getSessionFactory() == null) {
 			try {
-				Configuration dbConfig = new Configuration().configure("hibernate.cfg.xml");
-				sessionFactory = dbConfig.buildSessionFactory();
+				// Configuration dbConfig = new
+				// Configuration().configure("hibernate.cfg.xml");
+				// sessionFactory = dbConfig.buildSessionFactory();
 			} catch (Throwable ex) {
 				log.error(ex);
 				ex.printStackTrace();
@@ -113,11 +113,11 @@ public class HibernateUtils {
 			/*
 			 * Nếu Transaction đã được begin và không có lỗi nào trong lần
 			 * commit trước đó (hasExceptionDuringCommit = false)
-			 *
+			 * 
 			 * Thực hiện commit transaction của session tiếp theo Nếu có lỗi đặt
 			 * cờ (hasExceptionDuringCommit = true). không commit nữa mà gán
 			 * session tiếp theo vào biến localSessionsWillRollBack
-			 *
+			 * 
 			 * hasExceptionDuringCommit = true: không commit nữa mà gán session
 			 * tiếp theo vào biến localSessionsWillRollBack
 			 */
@@ -127,7 +127,9 @@ public class HibernateUtils {
 				} catch (Throwable ex) {
 					ex.printStackTrace();
 					sessionsToRollBack = session;
-					log.error("Co loi xay ra khi commit transaction cua session", ex);
+					log.error(
+							"Co loi xay ra khi commit transaction cua session",
+							ex);
 				}
 			}
 		}
