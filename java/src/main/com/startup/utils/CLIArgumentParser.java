@@ -63,7 +63,7 @@ public class CLIArgumentParser {
 		}
 
 		public Map<String, String> getOptions() {
-			Map<String, String> map = new TreeMap();
+			Map<String, String> map = new TreeMap<String, String>();
 			Iterator var2 = this.options.getOptions().iterator();
 
 			while (var2.hasNext()) {
