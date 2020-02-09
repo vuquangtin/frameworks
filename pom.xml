@@ -152,7 +152,19 @@
 			<artifactId>commons-cli</artifactId>
 			<version>1.4</version>
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.github.pcj/google-options -->
+		<dependency>
+			<groupId>com.github.pcj</groupId>
+			<artifactId>google-options</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 		<!-- END /frameworks/java/src/main -->
 	</dependencies>
 	<build>
