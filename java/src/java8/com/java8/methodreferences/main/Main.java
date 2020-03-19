@@ -1,6 +1,11 @@
 package com.java8.methodreferences.main;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 /**
@@ -77,7 +82,21 @@ public class Main {
 		Stream.generate(Math::random).limit(10).forEach(System.out::println);
 
 		Stream.of(3, 1, 4, 1, 5, 9).forEach(new Main()::print);
+		Main main = new Main();
+		Stream.of(3, 1, 4, 1, 5, 9).forEach(main::print);
 		Stream.of(3, 1, 4, 1, 5, 9).forEach(Main::staticPrint);
+		// Person[] roster = Person.roster.toArray(new
+		// Person[Person.roster.size()]);
+
+		Person[] rosterAsArray = Person.roster.toArray(new Person[Person.roster
+				.size()]);
+
+		Arrays.stream(rosterAsArray).forEach(System.out::println);
+
+		Set<Person> rosterSetLambda = transferElements(Person.roster, () -> {
+			return new HashSet<>();
+		});
+		rosterSetLambda.forEach(System.out::println);
 
 	}
 
@@ -88,5 +107,14 @@ public class Main {
 	public static void staticPrint(Object obj) {
 		System.out.println(obj.toString());
 
+	}
+
+	public static <T, SOURCE extends Collection<T>, DEST extends Collection<T>> DEST transferElements(
+			SOURCE sourceCollection, Supplier<DEST> collectionFactory) {
+		DEST result = collectionFactory.get();
+		for (T t : sourceCollection) {
+			result.add(t);
+		}
+		return result;
 	}
 }
