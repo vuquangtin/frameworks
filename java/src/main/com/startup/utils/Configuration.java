@@ -97,10 +97,10 @@ public class Configuration extends Properties {
 	}
 
 	public synchronized String toString() {
-		Set<Object> keySet = new LinkedHashSet();
+		Set<Object> keySet = new LinkedHashSet<Object>();
 		keySet.addAll(this.keySet());
 		keySet.addAll(defaultProps.keySet());
-		List<Object> list = new ArrayList(keySet);
+		List<Object> list = new ArrayList<Object>(keySet);
 		list.sort(Comparator.comparing(Object::toString));
 		StringBuilder sb = new StringBuilder("Configuration properties:\n");
 		list.forEach((key) -> {
