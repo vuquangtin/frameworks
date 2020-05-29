@@ -7,36 +7,22 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import com.java8.adv.abs.TemplateMethod;
+
 /**
  * 
  * 
  * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
  * @version 1.0.0
  * @see <a href="https://github.com/vuquangtin/frameworks">https://github.com/
+
  *      vuquangtin/frameworks</a>
  *
  */
-public class RemoveDuplicatesDemo {
+public class RemoveDuplicatesDemo extends TemplateMethod {
 
 	public static void main(String[] args) {
-		List<String> cityList = new ArrayList<>();
-		cityList.add("Delhi");
-		cityList.add("Mumbai");
-		cityList.add("Bangalore");
-		cityList.add("Chennai");
-		cityList.add("Kolkata");
-		cityList.add("Mumbai");
-
-		List<String> newList = new ArrayList<>();
-		for (String name : cityList) {
-			if (!newList.contains(name)) {
-				newList.add(name);
-			}
-		}
-
-		for (String name : newList) {
-			System.out.println("City Name - " + name);
-		}
+		new RemoveDuplicatesDemo().runTemplateMethod(args);
 	}
 
 	/***
@@ -48,7 +34,7 @@ public class RemoveDuplicatesDemo {
 	 * unique elements. Then you can add the Set again to the List after
 	 * clearing the List. That gives you the List without any duplicates.
 	 */
-	public static void main1() {
+	public void implementionOne(String[] args) {
 		List<String> cityList = new ArrayList<>();
 		cityList.add("Delhi");
 		cityList.add("Mumbai");
@@ -80,7 +66,7 @@ public class RemoveDuplicatesDemo {
 	 * 
 	 * @param args
 	 */
-	public static void main2(String[] args) {
+	public void implementionTwo(String[] args) {
 		List<String> cityList = new ArrayList<>();
 		cityList.add("Delhi");
 		cityList.add("Mumbai");
@@ -112,7 +98,7 @@ public class RemoveDuplicatesDemo {
 	 * 
 	 * @param args
 	 */
-	public static void main3(String[] args) {
+	public void implementionThree(String[] args) {
 		List<String> cityList = new ArrayList<>();
 		cityList.add("Delhi");
 		cityList.add("Mumbai");
@@ -127,5 +113,64 @@ public class RemoveDuplicatesDemo {
 		for (String name : cityList) {
 			System.out.println("City Name - " + name);
 		}
+	}
+
+	@Override
+	public void implementionFour(String[] args) {
+		List<String> cityList = new ArrayList<>();
+		cityList.add("Delhi");
+		cityList.add("Mumbai");
+		cityList.add("Bangalore");
+		cityList.add("Chennai");
+		cityList.add("Kolkata");
+		cityList.add("Mumbai");
+
+		List<String> newList = new ArrayList<>();
+		for (String name : cityList) {
+			if (!newList.contains(name)) {
+				newList.add(name);
+			}
+		}
+
+		for (String name : newList) {
+			System.out.println("City Name - " + name);
+		}
+
+	}
+
+	@Override
+	public void implementionFive(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionSix(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionSeven(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionEight(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionNine(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionTen(String[] args) {
+		// TODO Auto-generated method stub
+
 	}
 }

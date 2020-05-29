@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import com.java8.adv.abs.TemplateMethod;
+
 /**
  * <h1>How to Sort ArrayList of Custom Objects in Java</h1> In the post How to
  * sort ArrayList in Java you have already seen how to sort an ArrayList of
@@ -36,6 +38,7 @@ import java.util.List;
  * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
  * @version 1.0.0
  * @see <a href="https://github.com/vuquangtin/frameworks">https://github.com/
+
  *      vuquangtin/frameworks</a>
  *
  */
@@ -79,18 +82,24 @@ class Employee implements Comparable<Employee> {
 
 	@Override
 	public String toString() {
-		return getFirstName() + " " + getLastName() + " " + getAge() + " " + getEmpId();
+		return getFirstName() + " " + getLastName() + " " + getAge() + " "
+				+ getEmpId();
 	}
 
 	@Override
 	public int compareTo(Employee o) {
 		int firstCmp = this.getFirstName().compareTo(o.getFirstName());
-		return firstCmp != 0 ? firstCmp : this.getLastName().compareTo(o.getLastName());
+		return firstCmp != 0 ? firstCmp : this.getLastName().compareTo(
+				o.getLastName());
 	}
 }
 
-public class SortObjectList {
+public class SortObjectList extends TemplateMethod {
 	public static void main(String[] args) {
+		new SortObjectList().runTemplateMethod(args);
+	}
+
+	public void implementionOne(String[] args) {
 		List<Employee> empList = new ArrayList<Employee>();
 		// Storing elements in the arraylist
 		empList.add(getData("E001", "Mishra", "Pyaremohan", 35));
@@ -114,7 +123,8 @@ public class SortObjectList {
 	}
 
 	// Stub method
-	private static Employee getData(String empId, String lastName, String firstName, int age) {
+	private static Employee getData(String empId, String lastName,
+			String firstName, int age) {
 		Employee employee = new Employee();
 		employee.setEmpId(empId);
 		employee.setLastName(lastName);
@@ -123,7 +133,7 @@ public class SortObjectList {
 		return employee;
 	}
 
-	public static void main2(String[] args) {
+	public void implementionTwo(String[] args) {
 		// Using diamond operator (Right side no type specified)
 		// Available from Java7 onwards
 		List<String> cityList = new ArrayList<>();
@@ -141,7 +151,7 @@ public class SortObjectList {
 		}
 	}
 
-	public static void main3(String[] args) {
+	public void implementionThree(String[] args) {
 		// Using diamond operator (Right side no type specified)
 		// Available from Java7 onwards
 		List<String> cityList = new ArrayList<>();
@@ -165,5 +175,47 @@ public class SortObjectList {
 		public int compare(String o1, String o2) {
 			return o2.compareTo(o1);
 		}
+	}
+
+	@Override
+	public void implementionFour(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionFive(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionSix(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionSeven(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionEight(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionNine(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionTen(String[] args) {
+		// TODO Auto-generated method stub
+
 	}
 }

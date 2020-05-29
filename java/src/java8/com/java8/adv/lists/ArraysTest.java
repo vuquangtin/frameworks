@@ -1,47 +1,62 @@
 package com.java8.adv.lists;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 import com.java8.adv.abs.TemplateMethod;
 
 /**
- * <h1>better options to join lists in Java.</h1> <br/>
- * Using addAll() method provided by List interface. <br/>
- * Using ListUtils.union() method provided by Apache Commons Collections.
+ * 
  * 
  * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
  * @version 1.0.0
  * @see <a href="https://github.com/vuquangtin/frameworks">https://github.com/
 
  *      vuquangtin/frameworks</a>
- * @see https://www.netjstech.com/2015/05/java-advanced-topics.html
+ *
  */
-public class JoinListDemo extends TemplateMethod {
-
+public class ArraysTest extends TemplateMethod {
 	public static void main(String[] args) {
-		new JoinListDemo().runTemplateMethod(args);
+		new ArraysTest().runTemplateMethod(args);
+	}
+
+	public static class Copy {
+		public String string;
+		public Integer integer;
+
+		public Copy(String string, Integer integer) {
+			super();
+			this.string = string;
+			this.integer = integer;
+		}
+
+		@Override
+		public String toString() {
+			return "Copy [string=" + string + ", integer=" + integer + "]";
+		}
+
 	}
 
 	@Override
 	public void implementionOne(String[] args) {
-		List<String> cityList = new ArrayList<String>();
-		cityList.add("Delhi");
-		cityList.add("Mumbai");
-		cityList.add("Kolkata");
-		List<String> anotherCityList = new ArrayList<String>();
-		anotherCityList.add("Hyderabad");
-		anotherCityList.add("Bangalore");
-		anotherCityList.add("Mumbai");
+		Copy[] copies = new Copy[1];
+		copies[0] = new Copy("EagleLi", 1);
 
-		// Using addAll method, here adding with in the first list
-		// we can create a new list and use addAll method to
-		// add both lists to the new List
-		cityList.addAll(anotherCityList);
-		System.out.println("--Merged List--");
-		for (String cityName : cityList) {
-			System.out.println("City Name " + cityName);
-		}
+		Copy[] copies2 = Arrays.copyOf(copies, copies.length);
+		copies2[0] = new Copy("EagleLi1", 1);
+		System.out.println(Arrays.asList(copies));
+		System.out.println(Arrays.asList(copies2));
+
+		System.out.println("\n--- 分割线 ---\n");
+
+		Copy[] copies3 = Arrays.copyOf(copies, copies.length);
+		copies3[0].string = "EagleLi1";
+		System.out.println(Arrays.asList(copies));
+		System.out.println(Arrays.asList(copies3));
+
+		System.out.println("\n--- 分割线 ---\n");
+
+		System.out.println(copies2[0] == copies[0]);
+		System.out.println(copies2[0].string == copies[0].string);
 
 	}
 
@@ -98,4 +113,5 @@ public class JoinListDemo extends TemplateMethod {
 		// TODO Auto-generated method stub
 
 	}
+
 }

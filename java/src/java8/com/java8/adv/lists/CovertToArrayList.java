@@ -13,6 +13,7 @@ import com.java8.adv.abs.TemplateMethod;
  * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
  * @version 1.0.0
  * @see <a href="https://github.com/vuquangtin/frameworks">https://github.com/
+
  *      vuquangtin/frameworks</a>
  *
  */
@@ -31,8 +32,9 @@ public class CovertToArrayList extends TemplateMethod {
 	 * ArrayList is asList() whose general form is
 	 */
 	@Override
-	public void main1(String[] args) {
-		String cityArray[] = { "Delhi", "Mumbai", "Bangalore", "Hyderabad", "Chennai" };
+	public void implementionOne(String[] args) {
+		String cityArray[] = { "Delhi", "Mumbai", "Bangalore", "Hyderabad",
+				"Chennai" };
 		// Converting array to List
 		List<String> cityList = Arrays.asList(cityArray);
 		for (String name : cityList) {
@@ -62,8 +64,9 @@ public class CovertToArrayList extends TemplateMethod {
 	 * 
 	 */
 	@Override
-	public void main2(String[] args) {
-		String cityArray[] = { "Delhi", "Mumbai", "Bangalore", "Hyderabad", "Chennai" };
+	public void implementionTwo(String[] args) {
+		String cityArray[] = { "Delhi", "Mumbai", "Bangalore", "Hyderabad",
+				"Chennai" };
 		// Converting array to List
 		List<String> cityList = Arrays.asList(cityArray);
 		// Attempt to add new element in the list
@@ -79,10 +82,12 @@ public class CovertToArrayList extends TemplateMethod {
 	 * Wrapping the list returned by Arrays.asList to a new ArrayList
 	 */
 	@Override
-	public void main3(String[] args) {
-		String cityArray[] = { "Delhi", "Mumbai", "Bangalore", "Hyderabad", "Chennai" };
+	public void implementionThree(String[] args) {
+		String cityArray[] = { "Delhi", "Mumbai", "Bangalore", "Hyderabad",
+				"Chennai" };
 		// Converting array to List
-		ArrayList<String> cityList = new ArrayList<String>(Arrays.asList(cityArray));
+		ArrayList<String> cityList = new ArrayList<String>(
+				Arrays.asList(cityArray));
 
 		cityList.add("Pune");
 		for (String name : cityList) {
@@ -103,8 +108,9 @@ public class CovertToArrayList extends TemplateMethod {
 	 * any exception.
 	 */
 	@Override
-	public void main4(String[] args) {
-		String cityArray[] = { "Delhi", "Mumbai", "Bangalore", "Hyderabad", "Chennai" };
+	public void implementionFour(String[] args) {
+		String cityArray[] = { "Delhi", "Mumbai", "Bangalore", "Hyderabad",
+				"Chennai" };
 		List<String> cityList = new ArrayList<String>();
 		Collections.addAll(cityList, cityArray);
 		cityList.add("Pune");
@@ -115,7 +121,37 @@ public class CovertToArrayList extends TemplateMethod {
 	}
 
 	@Override
-	public void main5(String[] args) {
+	public void implementionFive(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionSix(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionSeven(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionEight(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionNine(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionTen(String[] args) {
 		// TODO Auto-generated method stub
 
 	}

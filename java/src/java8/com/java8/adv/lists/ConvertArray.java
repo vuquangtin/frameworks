@@ -3,6 +3,8 @@ package com.java8.adv.lists;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.java8.adv.abs.TemplateMethod;
+
 /**
  * <h1>Better approach for converting ArrayList to Array in Java</h1> There is
  * another option provided by Collection interface itself. Within Collection
@@ -22,30 +24,17 @@ import java.util.List;
  * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
  * @version 1.0.0
  * @see <a href="https://github.com/vuquangtin/frameworks">https://github.com/
+
  *      vuquangtin/frameworks</a>
  *
  */
-public class ConvertArray {
+public class ConvertArray extends TemplateMethod {
 	public static void main(String[] args) {
-		List<String> cityList = new ArrayList<String>();
-		cityList.add("Delhi");
-		cityList.add("Mumbai");
-		cityList.add("Bangalore");
-		cityList.add("Hyderabad");
-		cityList.add("Chennai");
-
-		// Create an array of the same size as list
-		String cityArray[] = new String[cityList.size()];
-
-		cityArray = cityList.toArray(cityArray);
-
-		// Displaying Array values
-		for (String name : cityArray) {
-			System.out.println("City : " + name);
-		}
+		new ConvertArray().runTemplateMethod(args);
 	}
 
-	public static void main1(String[] args) {
+	@Override
+	public void implementionOne(String[] args) {
 		List<String> cityList = new ArrayList<String>();
 		cityList.add("Delhi");
 		cityList.add("Mumbai");
@@ -65,5 +54,75 @@ public class ConvertArray {
 		for (String name : cityArray) {
 			System.out.println("City : " + name);
 		}
+
+	}
+
+	@Override
+	public void implementionTwo(String[] args) {
+		List<String> cityList = new ArrayList<String>();
+		cityList.add("Delhi");
+		cityList.add("Mumbai");
+		cityList.add("Bangalore");
+		cityList.add("Hyderabad");
+		cityList.add("Chennai");
+
+		// Create an array of the same size as list
+		String cityArray[] = new String[cityList.size()];
+
+		cityArray = cityList.toArray(cityArray);
+
+		// Displaying Array values
+		for (String name : cityArray) {
+			System.out.println("City : " + name);
+		}
+
+	}
+
+	@Override
+	public void implementionThree(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionFour(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionFive(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionSix(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionSeven(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionEight(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionNine(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionTen(String[] args) {
+		// TODO Auto-generated method stub
+
 	}
 }

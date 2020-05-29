@@ -7,6 +7,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.java8.adv.abs.TemplateMethod;
+
 /**
  * 
  * Sorting ArrayList of strings using sort() method of List
@@ -14,11 +16,15 @@ import java.util.stream.Collectors;
  * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
  * @version 1.0.0
  * @see <a href="https://github.com/vuquangtin/frameworks">https://github.com/
+
  *      vuquangtin/frameworks</a>
  *
  */
-public class SortListDemo {
+public class SortListDemo extends TemplateMethod {
 	public static void main(String[] args) {
+		new SortListDemo().runTemplateMethod(args);
+	}
+	public void implementionOne(String[] args) {
 		List<String> cityList = new ArrayList<>();
 		cityList.add("Delhi");
 		cityList.add("Mumbai");
@@ -52,8 +58,9 @@ public class SortListDemo {
 	 * 
 	 * @param args
 	 */
-	public static void main1(String[] args) {
-		List<String> cityList = Arrays.asList("Delhi", "Mumbai", "Bangalore", "Chennai", "Kolkata", "Mumbai");
+	public void implementionTwo(String[] args) {
+		List<String> cityList = Arrays.asList("Delhi", "Mumbai", "Bangalore",
+				"Chennai", "Kolkata", "Mumbai");
 		// sorting the list
 		Collections.sort(cityList);
 		System.out.println("List sorted using natural ordering" + cityList);
@@ -64,8 +71,9 @@ public class SortListDemo {
 	 * 
 	 * @param args
 	 */
-	public static void main2(String[] args) {
-		List<String> cityList = Arrays.asList("Delhi", "Mumbai", "Bangalore", "Chennai", "Kolkata", "Mumbai");
+	public void implementionThree(String[] args) {
+		List<String> cityList = Arrays.asList("Delhi", "Mumbai", "Bangalore",
+				"Chennai", "Kolkata", "Mumbai");
 		// sorting the list in descending order
 		Collections.sort(cityList, Collections.reverseOrder());
 		System.out.println("List sorted in reverses order- " + cityList);
@@ -81,8 +89,9 @@ public class SortListDemo {
 	 * 
 	 * @param args
 	 */
-	public static void main3(String[] args) {
-		List<String> cityList = Arrays.asList("Delhi", "Mumbai", "Bangalore", "Chennai", "Kolkata", "Mumbai");
+	public void implementionFour(String[] args) {
+		List<String> cityList = Arrays.asList("Delhi", "Mumbai", "Bangalore",
+				"Chennai", "Kolkata", "Mumbai");
 		// sorting the list in descending order
 		Collections.sort(cityList, (String a, String b) -> b.compareTo(a));
 		System.out.println("List sorted in reverses order- " + cityList);
@@ -93,12 +102,45 @@ public class SortListDemo {
 	 * 
 	 * @param args
 	 */
-	public static void main4(String[] args) {
-		List<String> cityList = Arrays.asList("Delhi", "Mumbai", "Bangalore", "Chennai", "Kolkata", "Mumbai");
-		List<String> tempList = cityList.stream().sorted().collect(Collectors.toList());
+	public void implementionFive(String[] args) {
+		List<String> cityList = Arrays.asList("Delhi", "Mumbai", "Bangalore",
+				"Chennai", "Kolkata", "Mumbai");
+		List<String> tempList = cityList.stream().sorted()
+				.collect(Collectors.toList());
 		System.out.println("List sorted in natural order- " + tempList);
-		tempList = cityList.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+		tempList = cityList.stream().sorted(Comparator.reverseOrder())
+				.collect(Collectors.toList());
 		System.out.println("List sorted in reverse order- " + tempList);
+	}
+
+	@Override
+	public void implementionSix(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void implementionSeven(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void implementionEight(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void implementionNine(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void implementionTen(String[] args) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -5,17 +5,24 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import com.java8.adv.abs.TemplateMethod;
+
 /**
  * <h1>Sorting arraylist containing custom objects using Comparator</h1>
  * 
  * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
  * @version 1.0.0
  * @see <a href="https://github.com/vuquangtin/frameworks">https://github.com/
+
  *      vuquangtin/frameworks</a>
  *
  */
-public class SortObjectList2 {
+public class SortObjectList2 extends TemplateMethod {
 	public static void main(String[] args) {
+		new SortObjectList().runTemplateMethod(args);
+	}
+
+	public void implementionOne(String[] args) {
 		List<Employee> empList = new ArrayList<Employee>();
 		// Storing elements in the arraylist
 		empList.add(getData("E001", "Mishra", "Pyaremohan", 35));
@@ -39,13 +46,68 @@ public class SortObjectList2 {
 	}
 
 	// Stub method
-	private static Employee getData(String empId, String lastName, String firstName, int age) {
+	private static Employee getData(String empId, String lastName,
+			String firstName, int age) {
 		Employee employee = new Employee();
 		employee.setEmpId(empId);
 		employee.setLastName(lastName);
 		employee.setFirstName(firstName);
 		employee.setAge(age);
 		return employee;
+	}
+
+	@Override
+	public void implementionTwo(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionThree(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionFour(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionFive(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionSix(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionSeven(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionEight(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionNine(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementionTen(String[] args) {
+		// TODO Auto-generated method stub
+
 	}
 }
 
@@ -56,7 +118,8 @@ class MyComparator implements Comparator<Employee> {
 		if (firstCmp == 0) {
 			int lastCmp = o1.getLastName().compareTo(o2.getLastName());
 			if (lastCmp == 0) {
-				return (o2.getAge() < o1.getAge() ? -1 : (o2.getAge() == o1.getAge() ? 0 : 1));
+				return (o2.getAge() < o1.getAge() ? -1 : (o2.getAge() == o1
+						.getAge() ? 0 : 1));
 			} else {
 				return lastCmp;
 			}

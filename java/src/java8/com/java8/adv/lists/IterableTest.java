@@ -1,46 +1,52 @@
 package com.java8.adv.lists;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Iterator;
 
 import com.java8.adv.abs.TemplateMethod;
 
 /**
- * <h1>better options to join lists in Java.</h1> <br/>
- * Using addAll() method provided by List interface. <br/>
- * Using ListUtils.union() method provided by Apache Commons Collections.
+ * 
  * 
  * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
  * @version 1.0.0
  * @see <a href="https://github.com/vuquangtin/frameworks">https://github.com/
 
  *      vuquangtin/frameworks</a>
- * @see https://www.netjstech.com/2015/05/java-advanced-topics.html
+ *
  */
-public class JoinListDemo extends TemplateMethod {
-
+public class IterableTest extends TemplateMethod {
 	public static void main(String[] args) {
-		new JoinListDemo().runTemplateMethod(args);
+		new IterableTest().runTemplateMethod(args);
+
+	}
+
+	public static class IterableApp implements Iterable<Integer> {
+		@Override
+		public Iterator<Integer> iterator() {
+			return new IteratorApp();
+		}
+
+		private class IteratorApp implements Iterator<Integer> {
+			private int size = 3;
+			private int cursor = 0;
+
+			@Override
+			public boolean hasNext() {
+				return cursor < size;
+			}
+
+			@Override
+			public Integer next() {
+				return cursor++;
+			}
+		}
 	}
 
 	@Override
 	public void implementionOne(String[] args) {
-		List<String> cityList = new ArrayList<String>();
-		cityList.add("Delhi");
-		cityList.add("Mumbai");
-		cityList.add("Kolkata");
-		List<String> anotherCityList = new ArrayList<String>();
-		anotherCityList.add("Hyderabad");
-		anotherCityList.add("Bangalore");
-		anotherCityList.add("Mumbai");
-
-		// Using addAll method, here adding with in the first list
-		// we can create a new list and use addAll method to
-		// add both lists to the new List
-		cityList.addAll(anotherCityList);
-		System.out.println("--Merged List--");
-		for (String cityName : cityList) {
-			System.out.println("City Name " + cityName);
+		IterableApp iterableApp = new IterableApp();
+		for (Integer i : iterableApp) {
+			System.out.println(i);
 		}
 
 	}
@@ -98,4 +104,5 @@ public class JoinListDemo extends TemplateMethod {
 		// TODO Auto-generated method stub
 
 	}
+
 }
