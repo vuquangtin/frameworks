@@ -6,14 +6,14 @@ package com.java8.adv.abs;
  * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
  * @version 1.0.0
  * @see <a href="https://github.com/vuquangtin/frameworks">https://github.com/
-
+ * 
  *      vuquangtin/frameworks</a>
  *
  */
 public abstract class ExtendTemplateMethod extends TemplateMethod {
 	@Override
 	public void runTemplateMethod(String[] args) {
-		// TODO Auto-generated method stub
+
 		super.runTemplateMethod(args);
 		printDot("implementionEleven");
 		try {
@@ -77,24 +77,24 @@ public abstract class ExtendTemplateMethod extends TemplateMethod {
 		}
 	}
 
-	public abstract void implementionEleven(String[] args);
+	public abstract void implementionEleven(String[] args) throws Exception;
 
-	public abstract void implementionTwelve(String[] args);
+	public abstract void implementionTwelve(String[] args) throws Exception;
 
-	public abstract void implementionThirteen(String[] args);
+	public abstract void implementionThirteen(String[] args) throws Exception;
 
-	public abstract void implementionFourteen(String[] args);
+	public abstract void implementionFourteen(String[] args) throws Exception;
 
-	public abstract void implementionFifteen(String[] args);
+	public abstract void implementionFifteen(String[] args) throws Exception;
 
-	public abstract void implementionSixteen(String[] args);
+	public abstract void implementionSixteen(String[] args) throws Exception;
 
-	public abstract void implementionSeventeen(String[] args);
+	public abstract void implementionSeventeen(String[] args) throws Exception;
 
-	public abstract void implementionEighteen(String[] args);
+	public abstract void implementionEighteen(String[] args) throws Exception;
 
-	public abstract void implementionNineteen(String[] args);
+	public abstract void implementionNineteen(String[] args) throws Exception;
 
-	public abstract void implementionTwenty(String[] args);
+	public abstract void implementionTwenty(String[] args) throws Exception;
 
 }

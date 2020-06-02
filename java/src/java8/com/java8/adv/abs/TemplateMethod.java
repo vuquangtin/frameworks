@@ -87,23 +87,23 @@ public abstract class TemplateMethod {
 		System.out.println();
 	}
 
-	public abstract void implementionOne(String[] args);
+	public abstract void implementionOne(String[] args) throws Exception;
 
-	public abstract void implementionTwo(String[] args);
+	public abstract void implementionTwo(String[] args) throws Exception;
 
-	public abstract void implementionThree(String[] args);
+	public abstract void implementionThree(String[] args) throws Exception;
 
-	public abstract void implementionFour(String[] args);
+	public abstract void implementionFour(String[] args) throws Exception;
 
-	public abstract void implementionFive(String[] args);
+	public abstract void implementionFive(String[] args) throws Exception;
 
-	public abstract void implementionSix(String[] args);
+	public abstract void implementionSix(String[] args) throws Exception;
 
-	public abstract void implementionSeven(String[] args);
+	public abstract void implementionSeven(String[] args) throws Exception;
 
-	public abstract void implementionEight(String[] args);
+	public abstract void implementionEight(String[] args) throws Exception;
 
-	public abstract void implementionNine(String[] args);
+	public abstract void implementionNine(String[] args) throws Exception;
 
-	public abstract void implementionTen(String[] args);
+	public abstract void implementionTen(String[] args) throws Exception;
 }
