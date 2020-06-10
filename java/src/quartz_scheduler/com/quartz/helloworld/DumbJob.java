@@ -1,5 +1,6 @@
 package com.quartz.helloworld;
 
+import org.apache.log4j.Logger;
 import org.quartz.Job;
 import org.quartz.JobDataMap;
 import org.quartz.JobExecutionContext;
@@ -16,10 +17,15 @@ import org.quartz.JobKey;
  *      vuquangtin/frameworks</a>
  *
  */
-public class SimpleJob implements Job {
+public class DumbJob implements Job {
+	protected static Logger logger = Logger.getLogger(DumbJob.class.getName());
 
-	public void execute(JobExecutionContext context) throws JobExecutionException {
-		System.out.println("doing simple job.");
+	public DumbJob() {
+	}
+
+	public void execute(JobExecutionContext context)
+			throws JobExecutionException {
+		logger.debug("DumbJob .");
 		try {
 			JobKey key = context.getJobDetail().getKey();
 
@@ -27,10 +33,10 @@ public class SimpleJob implements Job {
 
 			String jobSays = dataMap.getString("jobSays");
 			float myFloatValue = dataMap.getFloat("myFloatValue");
-			System.out.println("Instance " + key + " of DumbJob says: "
-					+ jobSays + ", and val is: " + myFloatValue);
-			System.err.println("Instance " + key + " of DumbJob says: "
-					+ jobSays + ", and val is: " + myFloatValue);
+			logger.debug("Instance " + key + " of DumbJob says: " + jobSays
+					+ ", and val is: " + myFloatValue);
+			logger.debug("Instance " + key + " of DumbJob says: " + jobSays
+					+ ", and val is: " + myFloatValue);
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}

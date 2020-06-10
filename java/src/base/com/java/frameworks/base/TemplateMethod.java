@@ -1,4 +1,8 @@
-package com.java8.adv.abs;
+package com.java.frameworks.base;
+
+import org.apache.log4j.Logger;
+
+import com.java.frameworks.utils.Log4jUtils;
 
 /**
  * 
@@ -10,7 +14,11 @@ package com.java8.adv.abs;
  *      vuquangtin/frameworks</a>
  */
 public abstract class TemplateMethod {
+	protected static Logger logger = Logger.getLogger(TemplateMethod.class
+			.getName());
+
 	public void runTemplateMethod(String[] args) {
+		logger = Log4jUtils.initLog4j();
 		printDot("implementionOne");
 		try {
 			implementionOne(args);

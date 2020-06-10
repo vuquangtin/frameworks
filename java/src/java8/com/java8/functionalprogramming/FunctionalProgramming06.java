@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-import com.java8.adv.abs.TemplateMethod;
+import com.java.frameworks.base.TemplateMethod;
 
 /**
  * 

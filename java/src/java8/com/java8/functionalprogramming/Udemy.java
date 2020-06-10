@@ -7,7 +7,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import com.java8.adv.abs.ExtendTemplateMethod;
+import com.java.frameworks.base.ExtendTemplateMethod;
 
 /**
  * 

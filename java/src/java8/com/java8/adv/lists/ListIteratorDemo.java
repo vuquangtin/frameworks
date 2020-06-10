@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.ListIterator;
 
-import com.java8.adv.abs.ExtendTemplateMethod;
+import com.java.frameworks.base.ExtendTemplateMethod;
 
 /**
  * <h1>Points to note</h1> <br/>

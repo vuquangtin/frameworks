@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import com.java8.adv.abs.TemplateMethod;
+import com.java.frameworks.base.TemplateMethod;
 
 /**
  * <h1>Sorting arraylist containing custom objects using Comparator</h1>

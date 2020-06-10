@@ -11,7 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import com.java8.adv.abs.TemplateMethod;
+import com.java.frameworks.base.TemplateMethod;
 
 /**
  * 

@@ -10,7 +10,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import com.java8.adv.abs.TemplateMethod;
+import com.java.frameworks.base.TemplateMethod;
 
 /**
  * "Functional Programming in Java, Harnessing the Power of Java 8 Lambda Expressions"

@@ -1,4 +1,8 @@
-package com.java8.adv.abs;
+package com.java.frameworks.base;
+
+import org.apache.log4j.Logger;
+
+import com.java.frameworks.utils.TimeUtils;
 
 /**
  * 
@@ -6,11 +10,13 @@ package com.java8.adv.abs;
  * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
  * @version 1.0.0
  * @see <a href="https://github.com/vuquangtin/frameworks">https://github.com/
- * 
+
  *      vuquangtin/frameworks</a>
  *
  */
 public abstract class ExtendTemplateMethod extends TemplateMethod {
+	protected static Logger logger = Logger.getLogger(ExtendTemplateMethod.class.getName());
+
 	@Override
 	public void runTemplateMethod(String[] args) {
 

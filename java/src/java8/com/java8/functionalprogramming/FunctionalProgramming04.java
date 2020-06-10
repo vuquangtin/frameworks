@@ -19,7 +19,7 @@ import java.util.stream.Stream;
 
 import org.junit.Test;
 
-import com.java8.adv.abs.TemplateMethod;
+import com.java.frameworks.base.TemplateMethod;
 
 /**
  * 

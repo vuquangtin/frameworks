@@ -2,7 +2,7 @@ package com.java8.adv.lists;
 
 import java.util.Arrays;
 
-import com.java8.adv.abs.TemplateMethod;
+import com.java.frameworks.base.TemplateMethod;
 
 /**
  * 

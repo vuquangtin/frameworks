@@ -3,7 +3,7 @@ package com.java8.adv.lists;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.java8.adv.abs.TemplateMethod;
+import com.java.frameworks.base.TemplateMethod;
 
 /**
  * <h1>better options to join lists in Java.</h1> <br/>
