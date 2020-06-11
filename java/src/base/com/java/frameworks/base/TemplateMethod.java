@@ -17,7 +17,211 @@ public abstract class TemplateMethod {
 	protected static Logger logger = Logger.getLogger(TemplateMethod.class
 			.getName());
 
+	public void runTemplateMethod(String[] args,
+			IExtendTemplateMethod iTemplateMethod) {
+		runPrivateTemplateMethod(args);
+		if (iTemplateMethod != null) {
+			try {
+				printDot("implementorOne");
+				iTemplateMethod.implementorOne(args);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorTwo(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorThree(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorFour(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorFive(args);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorSix(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorSeven(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorEight(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorNine(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorTen(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+
+			try {
+				iTemplateMethod.implementorEleven(args);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorTwelve(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorThirteen(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorFourteen(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorFifteen(args);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorSixteen(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorSeventeen(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorEighteen(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorNineteen(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorTwenty(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+	public void runTemplateMethod(String[] args, ITemplateMethod iTemplateMethod) {
+		runPrivateTemplateMethod(args);
+		if (iTemplateMethod != null) {
+			try {
+				printDot("implementorOne");
+				iTemplateMethod.implementorOne(args);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorTwo(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorThree(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorFour(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorFive(args);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorSix(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorSeven(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorEight(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorNine(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			try {
+				iTemplateMethod.implementorTen(args);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+		}
+
+	}
+
 	public void runTemplateMethod(String[] args) {
+
+		if (this instanceof IExtendTemplateMethod) {
+			runTemplateMethod(args, (IExtendTemplateMethod) this);
+		} else if (this instanceof ITemplateMethod) {
+			runTemplateMethod(args, (ITemplateMethod) this);
+		} else {
+			runPrivateTemplateMethod(args);
+		}
+
+	}
+
+	private void runPrivateTemplateMethod(String[] args) {
 		logger = Log4jUtils.initLog4j();
 		printDot("implementionOne");
 		try {

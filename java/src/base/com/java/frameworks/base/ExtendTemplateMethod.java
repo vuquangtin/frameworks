@@ -2,8 +2,6 @@ package com.java.frameworks.base;
 
 import org.apache.log4j.Logger;
 
-import com.java.frameworks.utils.TimeUtils;
-
 /**
  * 
  * 
@@ -15,7 +13,19 @@ import com.java.frameworks.utils.TimeUtils;
  *
  */
 public abstract class ExtendTemplateMethod extends TemplateMethod {
-	protected static Logger logger = Logger.getLogger(ExtendTemplateMethod.class.getName());
+	protected static Logger logger = Logger
+			.getLogger(ExtendTemplateMethod.class.getName());
+
+	@Override
+	public void runTemplateMethod(String[] args, ITemplateMethod iTemplateMethod) {
+		super.runTemplateMethod(args, iTemplateMethod);
+	}
+
+	@Override
+	public void runTemplateMethod(String[] args,
+			IExtendTemplateMethod iTemplateMethod) {
+		super.runTemplateMethod(args, iTemplateMethod);
+	}
 
 	@Override
 	public void runTemplateMethod(String[] args) {
