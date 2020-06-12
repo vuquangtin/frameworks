@@ -1,5 +1,7 @@
 package com.java.frameworks.base;
 
+import java.util.Objects;
+
 import org.apache.log4j.Logger;
 
 import com.java.frameworks.utils.Log4jUtils;
@@ -17,7 +19,7 @@ public abstract class TemplateMethod {
 	protected static Logger logger = Logger.getLogger(TemplateMethod.class
 			.getName());
 
-	public void runTemplateMethod(String[] args,
+	protected void runTemplateMethod(String[] args,
 			IExtendTemplateMethod iTemplateMethod) {
 		runPrivateTemplateMethod(args);
 		if (iTemplateMethod != null) {
@@ -143,7 +145,8 @@ public abstract class TemplateMethod {
 
 	}
 
-	public void runTemplateMethod(String[] args, ITemplateMethod iTemplateMethod) {
+	protected void runTemplateMethod(String[] args,
+			ITemplateMethod iTemplateMethod) {
 		runPrivateTemplateMethod(args);
 		if (iTemplateMethod != null) {
 			try {
@@ -297,6 +300,14 @@ public abstract class TemplateMethod {
 				System.out.print(methodName);
 		}
 		System.out.println();
+	}
+
+	protected void println(Object message) {
+		System.out.println(Objects.toString(message));
+	}
+
+	protected void log(Object message) {
+		System.out.println(Objects.toString(message));
 	}
 
 	public abstract void implementionOne(String[] args) throws Exception;
