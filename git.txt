@@ -1,0 +1,4 @@
+This works for me to override all local changes and does not require an identity:
+
+git reset --hard
+git pull
