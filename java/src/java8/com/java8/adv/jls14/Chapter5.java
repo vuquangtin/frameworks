@@ -3,6 +3,9 @@ package com.java8.adv.jls14;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.java.frameworks.base.ITemplateMethod;
+import com.java.frameworks.base.TemplateMethod;
+
 /**
  * 
  * 
@@ -13,9 +16,15 @@ import java.util.List;
  *      vuquangtin/frameworks</a>
  *
  */
-public class Chapter5// Chapter 5, conversions
+public class Chapter5 extends TemplateMethod implements ITemplateMethod
+// Chapter 5, conversions
 {
 	public static void main(String[] args) {
+		new Chapter5().runTemplateMethod(args);
+	}
+
+	@Override
+	public void implementionOne(String[] args) throws Exception {
 		// Casting conversion (5.4) of a float literal to
 		// type int. Without the cast operator, this would
 		// be a compile-time error, because this is a
@@ -48,6 +57,12 @@ public class Chapter5// Chapter 5, conversions
 
 		// Two string conversions of f and d:
 		System.out.println("Math.sin(" + f + ")==" + d);
+
+	}
+
+	@Override
+	public void implementionTwo(String[] args) throws Exception {
+		narrowingAndWidening();
 	}
 
 	public static void narrowingAndWidening() {
@@ -77,15 +92,10 @@ public class Chapter5// Chapter 5, conversions
 		System.out.println("(float)1e-50==" + (float) 1e-50);
 	}
 
-	public static void reverse(List<?> list) {
-		rev(list);
-	}
+	@Override
+	public void implementionThree(String[] args) throws Exception {
+		assignmentConversions();
 
-	private static <T> void rev(List<T> list) {
-		List<T> tmp = new ArrayList<T>(list);
-		for (int i = 0; i < list.size(); i++) {
-			list.set(i, tmp.get(list.size() - i - 1));
-		}
 	}
 
 	public static void assignmentConversions() {
@@ -98,6 +108,12 @@ public class Chapter5// Chapter 5, conversions
 		f = 1.23f;
 		double d = f; // widen float to double
 		System.out.println("d=" + d);
+	}
+
+	@Override
+	public void implementionFour(String[] args) throws Exception {
+		referenceTypeConversions();
+
 	}
 
 	public static void referenceTypeConversions() {
@@ -134,6 +150,12 @@ public class Chapter5// Chapter 5, conversions
 		// p3da = pa;
 		// Error: (cast needed) since a Point
 		// can't be assigned to a Point3D
+	}
+
+	@Override
+	public void implementionFive(String[] args) throws Exception {
+		ArrayConversions();
+
 	}
 
 	public static void ArrayConversions() {
@@ -183,6 +205,18 @@ public class Chapter5// Chapter 5, conversions
 		System.out.println(" }");
 	}
 
+	@Override
+	public void implementionSix(String[] args) throws Exception {
+		castingConversionsForArrays();
+
+	}
+
+	@Override
+	public void implementionSeven(String[] args) throws Exception {
+		castingConversions();
+
+	}
+
 	public static void unaryNumericPromotions() {
 		byte b = 2;
 		int a[] = new int[b]; // dimension expression promotion
@@ -219,4 +253,127 @@ public class Chapter5// Chapter 5, conversions
 		System.out.println(1.0 / f);
 	}
 
+	@Override
+	public void implementionEight(String[] args) throws Exception {
+		binaryNumericPromotions();
+
+	}
+
+	@Override
+	public void implementionNine(String[] args) throws Exception {
+		unaryNumericPromotions();
+
+	}
+
+	@Override
+	public void implementionTen(String[] args) throws Exception {
+		Point[] pa = new Point[100];
+
+		// The following line will throw a ClassCastException:
+		ColoredPoint[] cpa = (ColoredPoint[]) pa;
+		System.out.println(cpa[0]);
+
+		int[] shortvec = new int[2];
+		Object o = shortvec;
+
+		// The following line will throw a ClassCastException:
+		Colorable c = (Colorable) o;
+		c.setColor(0);
+
+	}
+
+	public static void reverse(List<?> list) {
+		rev(list);
+	}
+
+	private static <T> void rev(List<T> list) {
+		List<T> tmp = new ArrayList<T>(list);
+		for (int i = 0; i < list.size(); i++) {
+			list.set(i, tmp.get(list.size() - i - 1));
+		}
+	}
+
+	@Override
+	public void implementorOne(String[] args) throws Exception {
+		byte b = 1;
+		int rm=b;
+		b = b * 2;
+		
+		int m=100;
+		m=m*100l;
+		m=(int)(m*100f);
+	}
+
+	@Override
+	public void implementorTwo(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementorThree(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementorFour(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementorFive(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementorSix(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementorSeven(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementorEight(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementorNine(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementorTen(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	// interface Colorable {
+	//
+	// void setColor(int color);
+	// }
+	//
+	// class Point {
+	//
+	// int x, y;
+	// }
+	//
+	// class ColoredPoint extends Point implements Colorable {
+	//
+	// int color;
+	//
+	// public void setColor(int color) {
+	// this.color = color;
+	// }
+	// }
 }

@@ -31,4 +31,8 @@ public class ColoredPoint extends Point {
 	public void getColor() throws IllegalArgumentException {
 
 	}
+
+	public void setColor(int color) {
+		this.color = color;
+	}
 }
