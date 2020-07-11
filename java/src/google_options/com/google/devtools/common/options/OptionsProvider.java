@@ -14,10 +14,10 @@
 
 package com.google.devtools.common.options;
 
+import java.util.List;
+
 import com.google.devtools.common.options.OptionsParser.OptionValueDescription;
 import com.google.devtools.common.options.OptionsParser.UnparsedOptionValueDescription;
-
-import java.util.List;
 
 /**
  * A read-only interface for options parser results, which does not allow any

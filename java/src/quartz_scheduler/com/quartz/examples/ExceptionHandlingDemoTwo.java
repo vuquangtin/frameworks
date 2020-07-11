@@ -2,6 +2,7 @@ package com.quartz.examples;
 
 import java.util.Calendar;
 import java.util.Date;
+
 import org.quartz.JobBuilder;
 import org.quartz.JobDetail;
 import org.quartz.Scheduler;

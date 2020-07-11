@@ -1,8 +1,8 @@
 package com.quartz.web.template;
 
-import org.quartz.Job;
-
 import java.util.List;
+
+import org.quartz.Job;
 
 /**
  * Licensed to the Apache Software Foundation (ASF) under one

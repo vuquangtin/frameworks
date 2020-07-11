@@ -1,9 +1,5 @@
 package com.quartz.smssendmt.service;
 
-import java.net.URL;
-
-import javax.naming.ConfigurationException;
-
 import org.hibernate.cfg.Configuration;
 
 /**

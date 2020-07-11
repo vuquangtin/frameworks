@@ -29,68 +29,101 @@ public abstract class ExtendTemplateMethod extends TemplateMethod {
 
 	@Override
 	public void runTemplateMethod(String[] args) {
+		runTemplateMethod(args, true);
+	}
 
-		super.runTemplateMethod(args);
+	public void runTemplateMethod(String[] args, boolean isLog) {
 		printDot("implementionEleven");
 		try {
 			implementionEleven(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
 		printDot("implementionTwelve");
 		try {
 			implementionTwelve(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
 		printDot("implementionThirteen");
 		try {
 			implementionThirteen(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
 		printDot("implementionFourteen");
 		try {
 			implementionFourteen(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
 		printDot("implementionFifteen");
 		try {
 			implementionFifteen(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
 		printDot("implementionSixteen");
 		try {
 			implementionSixteen(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
 		printDot("implementionSeventeen");
 		try {
 			implementionSeventeen(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
 		printDot("implementionEighteen");
 		try {
 			implementionEighteen(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
 		printDot("implementionNineteen");
 		try {
 			implementionNineteen(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
 		printDot("implementionTwenty");
 		try {
 			implementionTwenty(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
+		super.runTemplateMethod(args);
 	}
 
 	public abstract void implementionEleven(String[] args) throws Exception;

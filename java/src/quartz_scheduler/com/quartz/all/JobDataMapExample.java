@@ -1,13 +1,8 @@
 package com.quartz.all;
 
 import org.quartz.CronScheduleBuilder;
-import org.quartz.Job;
 import org.quartz.JobBuilder;
-import org.quartz.JobDataMap;
 import org.quartz.JobDetail;
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
-import org.quartz.JobKey;
 import org.quartz.Scheduler;
 import org.quartz.Trigger;
 import org.quartz.TriggerBuilder;
@@ -15,7 +10,6 @@ import org.quartz.impl.StdSchedulerFactory;
 
 import com.java.frameworks.base.TemplateMethod;
 import com.quartz.helloworld.DumbJob;
-import com.quartz.helloworld.SimpleJob;
 
 /**
  * 

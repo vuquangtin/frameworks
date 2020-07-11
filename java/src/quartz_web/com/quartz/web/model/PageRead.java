@@ -1,8 +1,8 @@
 package com.quartz.web.model;
 
-import com.quartz.web.util.CONST;
-
 import java.util.List;
+
+import com.quartz.web.util.CONST;
 
 /**
  * Licensed to the Apache Software Foundation (ASF) under one

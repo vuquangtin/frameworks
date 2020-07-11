@@ -1,8 +1,12 @@
 package com.quartz.web.service;
 
-import com.quartz.web.model.*;
-
 import java.util.List;
+
+import com.quartz.web.model.PageInfo;
+import com.quartz.web.model.PageRead;
+import com.quartz.web.model.QuartzConfig;
+import com.quartz.web.model.QuartzParam;
+import com.quartz.web.model.QuartzWebJob;
 
 /**
  * Licensed to the Apache Software Foundation (ASF) under one

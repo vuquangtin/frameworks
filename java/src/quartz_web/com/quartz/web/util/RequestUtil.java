@@ -1,10 +1,10 @@
 package com.quartz.web.util;
 
+import javax.servlet.http.HttpServletRequest;
+
 import com.google.common.base.Strings;
 import com.quartz.web.exception.ParameterException;
 import com.quartz.web.model.ResponseMessage;
-
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * Licensed to the Apache Software Foundation (ASF) under one

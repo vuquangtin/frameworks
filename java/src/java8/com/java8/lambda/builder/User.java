@@ -1,10 +1,11 @@
 package com.java8.lambda.builder;
 
+import static java.util.Collections.unmodifiableSet;
+import static java.util.Objects.requireNonNull;
+
 import java.util.HashSet;
 import java.util.Set;
 import java.util.StringJoiner;
-import static java.util.Collections.unmodifiableSet;
-import static java.util.Objects.requireNonNull;
 /**
  * 
  * 

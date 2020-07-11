@@ -1,12 +1,13 @@
 package com.quartz.web.dao;
 
-import com.quartz.web.model.QuartzConfig;
+import java.util.List;
+
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
-import java.util.List;
+import com.quartz.web.model.QuartzConfig;
 
 /**
  * Licensed to the Apache Software Foundation (ASF) under one

@@ -1,14 +1,14 @@
 package com.startup.test;
 
 
+import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.fail;
+
 import org.junit.Before;
 import org.junit.Test;
 
 import com.startup.exceptions.InvalidInputException;
 import com.startup.utils.CommandLineParser;
-
-import static junit.framework.TestCase.assertEquals;
-import static junit.framework.TestCase.fail;
 
 /**
  * 

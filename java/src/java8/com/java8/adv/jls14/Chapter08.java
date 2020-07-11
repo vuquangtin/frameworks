@@ -22,7 +22,7 @@ import com.java.frameworks.base.TemplateMethod;
  *
  */
 
-public class Chapter8 extends TemplateMethod implements ITemplateMethod {
+public class Chapter08 extends TemplateMethod implements ITemplateMethod {
 
 	public static int m;
 	static {
@@ -31,7 +31,7 @@ public class Chapter8 extends TemplateMethod implements ITemplateMethod {
 	public static int k;
 
 	public static void main(String[] args) {
-		new Chapter8().runTemplateMethod(args);
+		new Chapter08().runTemplateMethod(args);
 	}
 
 	interface Frob {
@@ -415,7 +415,7 @@ public class Chapter8 extends TemplateMethod implements ITemplateMethod {
 	}
 
 	public static strictfp void main1(String[] args) {
-		Chapter8 t = new Chapter8();
+		Chapter08 t = new Chapter08();
 
 		System.out.println(t.sum());
 	}
@@ -475,33 +475,266 @@ public class Chapter8 extends TemplateMethod implements ITemplateMethod {
 
 	}
 
+	static String f(boolean a) {
+		return "boolean";
+	}
+
+	static String f(int a) {
+		return "int";
+	}
+
+	static String f(A a) {
+		return "A";
+	}
+
+	static String f(I a) {
+		return "I";
+	}
+
+	static String f(int[] a) {
+		return "int[]";
+	}
+
+	static String f(Object a) {
+		return "Object";
+	}
+
+	class A {
+	}
+
+	interface Iii {
+	}
+
+	/***
+	 * 08_op_cond_type-op_cond_type_01_eq/op_cond_type_01_eq.java
+	 */
 	@Override
 	public void implementorThree(String[] args) throws Exception {
-		// TODO Auto-generated method stub
+		System.out.print("bool  bool : ");
+		System.out.println(f(true ? true : false));
+		System.out.print("int   int  : ");
+		System.out.println(f(true ? 13 : 14));
+		System.out.print("A     A    : ");
+		System.out.println(f(true ? (A) null : (A) null));
+		System.out.print("I     I    : ");
+		System.out.println(f(true ? (Iii) null : (Iii) null));
+		System.out.print("int[] int[]: ");
+		System.out.println(f(true ? (int[]) null : (int[]) null));
+		System.out.println("Done!");
 
 	}
 
+	static String f(byte a) {
+		return "byte";
+	}
+
+	static String f(short a) {
+		return "short";
+	}
+
+	// static String f(int a) {
+	// return "int";
+	// }
+
+	static String f(long a) {
+		return "long";
+	}
+
+	static String f(char a) {
+		return "char";
+	}
+
+	/***
+	 * 08_op_cond_type-op_cond_type_02_numeric
+	 */
 	@Override
 	public void implementorFour(String[] args) throws Exception {
-		// TODO Auto-generated method stub
+		byte b = 0;
+		short s = 0;
+		int i = 0;
+		long l = 0;
+		char c = 0;
 
+		System.out.print("byte  byte  : ");
+		System.out.println(f(true ? b : b));
+		System.out.print("byte  short : ");
+		System.out.println(f(true ? b : s));
+		System.out.print("byte  int   : ");
+		System.out.println(f(true ? b : i));
+		System.out.print("byte  long  : ");
+		System.out.println(f(true ? b : l));
+		System.out.print("byte  char  : ");
+		System.out.println(f(true ? b : c));
+		System.out.println();
+
+		System.out.print("short byte  : ");
+		System.out.println(f(true ? s : b));
+		System.out.print("short short : ");
+		System.out.println(f(true ? s : s));
+		System.out.print("short int   : ");
+		System.out.println(f(true ? s : i));
+		System.out.print("short long  : ");
+		System.out.println(f(true ? s : l));
+		System.out.print("short char  : ");
+		System.out.println(f(true ? s : c));
+		System.out.println();
+
+		System.out.print("int   byte  : ");
+		System.out.println(f(true ? i : b));
+		System.out.print("int   short : ");
+		System.out.println(f(true ? i : s));
+		System.out.print("int   int   : ");
+		System.out.println(f(true ? i : i));
+		System.out.print("int   long  : ");
+		System.out.println(f(true ? i : l));
+		System.out.print("int   char  : ");
+		System.out.println(f(true ? i : c));
+		System.out.println();
+
+		System.out.print("long  byte  : ");
+		System.out.println(f(true ? l : b));
+		System.out.print("long  short : ");
+		System.out.println(f(true ? l : s));
+		System.out.print("long  int   : ");
+		System.out.println(f(true ? l : i));
+		System.out.print("long  long  : ");
+		System.out.println(f(true ? l : l));
+		System.out.print("long  char  : ");
+		System.out.println(f(true ? l : c));
+		System.out.println();
+
+		System.out.print("char  byte  : ");
+		System.out.println(f(true ? c : b));
+		System.out.print("char  short : ");
+		System.out.println(f(true ? c : s));
+		System.out.print("char  int   : ");
+		System.out.println(f(true ? c : i));
+		System.out.print("char  long  : ");
+		System.out.println(f(true ? c : l));
+		System.out.print("char  char  : ");
+		System.out.println(f(true ? c : c));
+		System.out.println();
+
+		System.out.println("Done!");
 	}
 
+	/***
+	 * 08_op_cond_type-op_cond_type_03_null_ref
+	 */
 	@Override
 	public void implementorFive(String[] args) throws Exception {
-		// TODO Auto-generated method stub
+		System.out.print("A     null : ");
+		System.out.println(f(true ? (A) null : null));
+		System.out.print("null  A    : ");
+		System.out.println(f(true ? null : (A) null));
+		System.out.print("null  I    : ");
+		System.out.println(f(true ? null : (I) null));
+		System.out.print("null  int[]: ");
+		System.out.println(f(true ? null : (int[]) null));
+		System.out.println("Done!");
 
 	}
 
+	/***
+	 * 08_op_cond_type-op_cond_type_04_null_null
+	 */
 	@Override
 	public void implementorSix(String[] args) throws Exception {
-		// TODO Auto-generated method stub
+		System.out.print("null  null : ");
+		System.out.println(f(true ? null : null));
+		System.out.println("Done!");
 
 	}
+
+	// static String f(A a) {
+	// return "A";
+	// }
+
+	static String f(B a) {
+		return "B";
+	}
+
+	static String f(I1 a) {
+		return "I1";
+	}
+
+	static String f(I2 a) {
+		return "I2";
+	}
+
+	static String f(I3 a) {
+		return "I3";
+	}
+
+	static String f(I1[] a) {
+		return "I1[]";
+	}
+
+	static String f(I2[] a) {
+		return "I2[]";
+	}
+
+	static String f(B[] a) {
+		return "B[]";
+	}
+
+	static String f(Object[] a) {
+		return "Object[]";
+	}
+
+	// static String f(Object a) {
+	// return "Object";
+	// }
+	// }
+
+//	interface I1 {
+//	}
+//
+//	interface I2 extends I1 {
+//	}
+
+	interface I3 extends I2 {
+	}
+
+//	class A implements I1 {
+//	}
+
+	class B extends A {
+	}
+
+	/***
+	 * 08_op_cond_type-op_cond_type_05_ref_ref
+	 **/
+	/*
+	 * Conditional with two refs, one subtype of another. Types: A, I2 < I1. I3
+	 * < I2, B < A, Pairs: - A I1 - I1 A - I2 I1 - I2[] I1[] - A Object - I3 I1
+	 * - I1 I3 - B Object - Object B - B[] Object[] Args: - A, B, I1, I2, I3,
+	 * I1[], I2[], B[], Object[], Object.
+	 */
 
 	@Override
 	public void implementorSeven(String[] args) throws Exception {
-		// TODO Auto-generated method stub
+		System.out.print("A      I1       : ");
+		System.out.println(f(true ? (A) null : (I1) null));
+		System.out.print("I1     A        : ");
+		System.out.println(f(true ? (I1) null : (A) null));
+		System.out.print("I2     I1       : ");
+		System.out.println(f(true ? (I2) null : (I1) null));
+		System.out.print("I2[]   I1[]     : ");
+		System.out.println(f(true ? (I2[]) null : (I1[]) null));
+		System.out.print("A      Object   : ");
+		System.out.println(f(true ? (A) null : (Object) null));
+		System.out.print("I3     I1       : ");
+		System.out.println(f(true ? (I3) null : (I1) null));
+		System.out.print("I1     I3       : ");
+		System.out.println(f(true ? (I1) null : (I3) null));
+		System.out.print("B      Object   : ");
+		System.out.println(f(true ? (B) null : (Object) null));
+		System.out.print("Object B        : ");
+		System.out.println(f(true ? (Object) null : (B) null));
+		System.out.print("B[]    Object[] : ");
+		System.out.println(f(true ? (B[]) null : (Object[]) null));
+		System.out.println("Done!");
 
 	}
 

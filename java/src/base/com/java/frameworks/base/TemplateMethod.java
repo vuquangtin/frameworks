@@ -28,118 +28,197 @@ public abstract class TemplateMethod {
 				iTemplateMethod.implementorOne(args);
 			} catch (Exception e) {
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorTwo");
 				iTemplateMethod.implementorTwo(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorThree");
 				iTemplateMethod.implementorThree(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorFour");
 				iTemplateMethod.implementorFour(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorFive");
 				iTemplateMethod.implementorFive(args);
 			} catch (Exception e) {
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorSix");
 				iTemplateMethod.implementorSix(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorSeven");
 				iTemplateMethod.implementorSeven(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorEight");
 				iTemplateMethod.implementorEight(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorNine");
 				iTemplateMethod.implementorNine(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorTen");
 				iTemplateMethod.implementorTen(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 
 			try {
+				printDot("implementorEleven");
 				iTemplateMethod.implementorEleven(args);
 			} catch (Exception e) {
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorTwelve");
 				iTemplateMethod.implementorTwelve(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorThirteen");
 				iTemplateMethod.implementorThirteen(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorFourteen");
 				iTemplateMethod.implementorFourteen(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorFifteen");
 				iTemplateMethod.implementorFifteen(args);
 			} catch (Exception e) {
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorSixteen");
 				iTemplateMethod.implementorSixteen(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorSeventeen");
 				iTemplateMethod.implementorSeventeen(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorEighteen");
 				iTemplateMethod.implementorEighteen(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorNineteen");
 				iTemplateMethod.implementorNineteen(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorTwenty");
 				iTemplateMethod.implementorTwenty(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 		}
 
@@ -154,59 +233,98 @@ public abstract class TemplateMethod {
 				iTemplateMethod.implementorOne(args);
 			} catch (Exception e) {
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorTwo");
 				iTemplateMethod.implementorTwo(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorThree");
 				iTemplateMethod.implementorThree(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorFour");
 				iTemplateMethod.implementorFour(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorFive");
 				iTemplateMethod.implementorFive(args);
 			} catch (Exception e) {
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorSix");
 				iTemplateMethod.implementorSix(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorSeven");
 				iTemplateMethod.implementorSeven(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorEight");
 				iTemplateMethod.implementorEight(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorNine");
 				iTemplateMethod.implementorNine(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 			try {
+				printDot("implementorTen");
 				iTemplateMethod.implementorTen(args);
 			} catch (Exception e) {
 
 				e.printStackTrace();
+			} catch (Throwable t) {
+				t.printStackTrace();
+				log(t);
 			}
 		}
 
@@ -231,60 +349,90 @@ public abstract class TemplateMethod {
 			implementionOne(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
 		printDot("implementionTwo");
 		try {
 			implementionTwo(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
 		printDot("implementionThree");
 		try {
 			implementionThree(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
 		printDot("implementionFour");
 		try {
 			implementionFour(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
 		printDot("implementionFive");
 		try {
 			implementionFive(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
 		printDot("implementionSix");
 		try {
 			implementionSix(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
 		printDot("implementionSeven");
 		try {
 			implementionSeven(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
 		printDot("implementionEight");
 		try {
 			implementionEight(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
 		printDot("implementionNine");
 		try {
 			implementionNine(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
 		printDot("implementionTen");
 		try {
 			implementionTen(args);
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} catch (Throwable t) {
+			t.printStackTrace();
+			log(t);
 		}
 	}
 

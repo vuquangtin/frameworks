@@ -1,10 +1,7 @@
 package com.quartz.helloworld;
 
-import java.util.Date;
-
 import org.quartz.CronScheduleBuilder;
 import org.quartz.CronTrigger;
-import org.quartz.DateBuilder;
 import org.quartz.JobBuilder;
 import org.quartz.JobDetail;
 import org.quartz.JobKey;

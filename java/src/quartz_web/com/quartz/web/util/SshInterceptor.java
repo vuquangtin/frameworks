@@ -1,14 +1,15 @@
 package com.quartz.web.util;
 
-import com.google.common.base.Strings;
-import com.quartz.web.controller.MainFrameController;
-import com.quartz.web.model.QuartzConfig;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import com.google.common.base.Strings;
+import com.quartz.web.controller.MainFrameController;
+import com.quartz.web.model.QuartzConfig;
 
 /**
  * Created by jeffrey on 11/9/15.

@@ -13,14 +13,14 @@
 // limitations under the License.
 package com.google.devtools.common.options;
 
-import com.google.common.annotations.VisibleForTesting;
-import com.google.common.primitives.Primitives;
-import com.google.common.reflect.TypeToken;
-
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.lang.reflect.TypeVariable;
+
+import com.google.common.annotations.VisibleForTesting;
+import com.google.common.primitives.Primitives;
+import com.google.common.reflect.TypeToken;
 
 /**
  * A helper class for {@link OptionsParserImpl} to help checking the return type

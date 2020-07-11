@@ -14,10 +14,6 @@
 
 package com.google.devtools.common.options;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -30,6 +26,11 @@ import java.util.List;
 import java.util.Map;
 
 import javax.annotation.concurrent.Immutable;
+
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 
 /**
  * An immutable selection of options data corresponding to a set of options

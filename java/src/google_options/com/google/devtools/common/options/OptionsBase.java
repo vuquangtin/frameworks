@@ -14,12 +14,12 @@
 
 package com.google.devtools.common.options;
 
-import com.google.common.escape.CharEscaperBuilder;
-import com.google.common.escape.Escaper;
-
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+
+import com.google.common.escape.CharEscaperBuilder;
+import com.google.common.escape.Escaper;
 
 /**
  * Base class for all options classes.  Extend this class, adding public

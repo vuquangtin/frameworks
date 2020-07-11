@@ -1,10 +1,11 @@
 package com.quartz.web.util;
 
-import com.google.common.base.Strings;
+import java.io.IOException;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+
+import com.google.common.base.Strings;
 
 /**
  * Copyright (c) 2014, Sohu.com All Rights Reserved.
