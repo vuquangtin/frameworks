@@ -89,7 +89,7 @@ public class Chapter03 extends TemplateMethod {
 			// )
 			li = f(1).g(2);
 
-			System.out.println("Done!");
+			logger.debug("Done!");
 		}
 	}
 
@@ -166,7 +166,7 @@ public class Chapter03 extends TemplateMethod {
 			li = f(1).f(2).b;
 			li = f(1).f(2).g(3);
 
-			System.out.println("Done!");
+			logger.debug("Done!");
 		}
 	}
 
@@ -232,7 +232,7 @@ public class Chapter03 extends TemplateMethod {
 			f(1).a.b = 5;
 			f(1).f(1).b = 5;
 
-			System.out.println("Done!");
+			logger.debug("Done!");
 		}
 	}
 
@@ -299,7 +299,7 @@ public class Chapter03 extends TemplateMethod {
 		// a >>= i;
 		// a >>>= i;
 
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
@@ -360,7 +360,7 @@ public class Chapter03 extends TemplateMethod {
 		a >>= i;
 		a >>>= i;
 
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 

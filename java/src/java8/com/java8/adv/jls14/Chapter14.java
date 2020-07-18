@@ -1,6 +1,8 @@
 package com.java8.adv.jls14;
 
 import com.java.frameworks.base.ExtendTemplateMethod;
+import com.java.frameworks.base.ITemplateMethod;
+import com.java8.generics.Test;
 
 /**
  * 
@@ -12,7 +14,7 @@ import com.java.frameworks.base.ExtendTemplateMethod;
  *      vuquangtin/frameworks</a>
  *
  */
-public class Chapter14 extends ExtendTemplateMethod {
+public class Chapter14 extends ExtendTemplateMethod implements ITemplateMethod {
 	@FunctionalInterface
 	interface IF {
 		void print(String s);
@@ -35,30 +37,30 @@ public class Chapter14 extends ExtendTemplateMethod {
 
 	class test {
 		test() {
-			System.out.println("test.test()");
+			logger.debug("test.test()");
 			f();
 		}
 
 		void f() {
-			System.out.println("f()");
+			logger.debug("f()");
 		}
 	}
 
 	@Override
 	public void implementionTwo(String[] args) throws Exception {
 		new test();
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
 	class test2 {
 		test2() {
-			System.out.println("test.test()");
+			logger.debug("test.test()");
 			f();
 		}
 
 		void f() {
-			System.out.println("f()");
+			logger.debug("f()");
 			return;
 		}
 	}
@@ -66,18 +68,18 @@ public class Chapter14 extends ExtendTemplateMethod {
 	@Override
 	public void implementionThree(String[] args) throws Exception {
 		new test2();
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
 	class test3 {
 		test3() {
 			System.out.print("f() = ");
-			System.out.println(f());
+			logger.debug(f());
 		}
 
 		int f() {
-			System.out.println("inside f()");
+			logger.debug("inside f()");
 			return 80;
 		}
 	}
@@ -85,18 +87,18 @@ public class Chapter14 extends ExtendTemplateMethod {
 	@Override
 	public void implementionFour(String[] args) throws Exception {
 		new test3();
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
 	class test4 {
 		test4() {
 			System.out.print("f() = ");
-			System.out.println(f());
+			logger.debug(f());
 		}
 
 		int f() {
-			System.out.println("inside f()");
+			logger.debug("inside f()");
 			return 3 + 4;
 		}
 	}
@@ -104,9 +106,9 @@ public class Chapter14 extends ExtendTemplateMethod {
 	class test5 {
 		test5() {
 			System.out.print("f(true) = ");
-			System.out.println(f(true));
+			logger.debug(f(true));
 			System.out.print("f(false) = ");
-			System.out.println(f(false));
+			logger.debug(f(false));
 		}
 
 		int f(boolean b) {
@@ -121,18 +123,18 @@ public class Chapter14 extends ExtendTemplateMethod {
 	@Override
 	public void implementionFive(String[] args) throws Exception {
 		new test4();
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
 	class test6 {
 		test6() {
 			System.out.print("isPrime(10) = ");
-			System.out.println(isPrime(10));
+			logger.debug(isPrime(10));
 			System.out.print("isPrime(9) = ");
-			System.out.println(isPrime(9));
+			logger.debug(isPrime(9));
 			System.out.print("isPrime(7) = ");
-			System.out.println(isPrime(7));
+			logger.debug(isPrime(7));
 		}
 
 		// JBook semantics don't support operator String + boolean, that's why
@@ -152,18 +154,18 @@ public class Chapter14 extends ExtendTemplateMethod {
 	@Override
 	public void implementionSix(String[] args) throws Exception {
 		new test6();
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
 	class test7 {
 		test7() {
 			System.out.print("isPrime(10) = ");
-			System.out.println(isPrime(10));
+			logger.debug(isPrime(10));
 			System.out.print("isPrime(9) = ");
-			System.out.println(isPrime(9));
+			logger.debug(isPrime(9));
 			System.out.print("isPrime(7) = ");
-			System.out.println(isPrime(7));
+			logger.debug(isPrime(7));
 		}
 
 		// JBook semantics don't support operator String + boolean, that's why
@@ -183,18 +185,18 @@ public class Chapter14 extends ExtendTemplateMethod {
 	@Override
 	public void implementionSeven(String[] args) throws Exception {
 		new test7();
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
 	class test8 {
 		test8() {
 			System.out.print("isPrime(10) = ");
-			System.out.println(isPrime(10));
+			logger.debug(isPrime(10));
 			System.out.print("isPrime(9) = ");
-			System.out.println(isPrime(9));
+			logger.debug(isPrime(9));
 			System.out.print("isPrime(7) = ");
-			System.out.println(isPrime(7));
+			logger.debug(isPrime(7));
 		}
 
 		// JBook semantics don't support operator String + boolean, that's why
@@ -212,18 +214,18 @@ public class Chapter14 extends ExtendTemplateMethod {
 	@Override
 	public void implementionEight(String[] args) throws Exception {
 		new test8();
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
 	class test9 {
 		test9() {
 			System.out.print("isPrime(10) = ");
-			System.out.println(isPrime(10));
+			logger.debug(isPrime(10));
 			System.out.print("isPrime(9) = ");
-			System.out.println(isPrime(9));
+			logger.debug(isPrime(9));
 			System.out.print("isPrime(7) = ");
-			System.out.println(isPrime(7));
+			logger.debug(isPrime(7));
 		}
 
 		// JBook semantics don't support operator String + boolean, that's why
@@ -244,18 +246,18 @@ public class Chapter14 extends ExtendTemplateMethod {
 	@Override
 	public void implementionNine(String[] args) throws Exception {
 		new test9();
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
 	class test10 {
 		test10() {
 			System.out.print("isPrime(10) = ");
-			System.out.println(isPrime(10));
+			logger.debug(isPrime(10));
 			System.out.print("isPrime(9) = ");
-			System.out.println(isPrime(9));
+			logger.debug(isPrime(9));
 			System.out.print("isPrime(7) = ");
-			System.out.println(isPrime(7));
+			logger.debug(isPrime(7));
 		}
 
 		// JBook semantics don't support operator String + boolean, that's why
@@ -275,28 +277,28 @@ public class Chapter14 extends ExtendTemplateMethod {
 	@Override
 	public void implementionTen(String[] args) throws Exception {
 		new test10();
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
 	class test11 {
 		test11() {
 			System.out.print("f() = ");
-			System.out.println(f());
+			logger.debug(f());
 		}
 
 		int f() {
 			try {
 				if (true)
 					return 1;
-				System.out.println("unreachable");
+				logger.debug("unreachable");
 			} catch (RuntimeException e) {
-				System.out.println(e.toString());
+				logger.debug(e.toString());
 				throw e;
 			} finally {
-				System.out.println("finally");
+				logger.debug("finally");
 			}
-			System.out.println("unreachable");
+			logger.debug("unreachable");
 			return 4;
 		}
 	}
@@ -304,14 +306,14 @@ public class Chapter14 extends ExtendTemplateMethod {
 	@Override
 	public void implementionEleven(String[] args) throws Exception {
 		new test11();
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
 	class test12 {
 		test12() {
 			System.out.print("f() = ");
-			System.out.println(f());
+			logger.debug(f());
 		}
 
 		int f() {
@@ -321,14 +323,14 @@ public class Chapter14 extends ExtendTemplateMethod {
 				// if (true) throw new RuntimeException("re");
 				if (true)
 					throw new RuntimeException();
-				System.out.println("unreachable");
+				logger.debug("unreachable");
 			} catch (RuntimeException e) {
-				System.out.println(e.toString());
+				logger.debug(e.toString());
 				return 2;
 			} finally {
-				System.out.println("finally");
+				logger.debug("finally");
 			}
-			System.out.println("unreachable");
+			logger.debug("unreachable");
 			return 4;
 		}
 	}
@@ -336,28 +338,28 @@ public class Chapter14 extends ExtendTemplateMethod {
 	@Override
 	public void implementionTwelve(String[] args) throws Exception {
 		new test12();
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
 	class test13 {
 		test13() {
 			System.out.print("f() = ");
-			System.out.println(f());
+			logger.debug(f());
 		}
 
 		int f() {
 			try {
-				System.out.println("try");
+				logger.debug("try");
 			} catch (RuntimeException e) {
-				System.out.println(e.toString());
+				logger.debug(e.toString());
 				return 2;
 			} finally {
-				System.out.println("finally");
+				logger.debug("finally");
 				if (true)
 					return 3;
 			}
-			System.out.println("unreachable");
+			logger.debug("unreachable");
 			return 4;
 		}
 	}
@@ -365,22 +367,22 @@ public class Chapter14 extends ExtendTemplateMethod {
 	@Override
 	public void implementionThirteen(String[] args) throws Exception {
 		new test13();
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
 	class test14 {
 		test14() {
 			System.out.print("f() = ");
-			System.out.println(f());
+			logger.debug(f());
 		}
 
 		int f() {
 			try {
-				System.out.println("try");
+				logger.debug("try");
 				return 1;
 			} finally {
-				System.out.println("finally");
+				logger.debug("finally");
 				if (true)
 					return 3;
 			}
@@ -390,25 +392,25 @@ public class Chapter14 extends ExtendTemplateMethod {
 	@Override
 	public void implementionFourteen(String[] args) throws Exception {
 		new test14();
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
 	class test15 {
 		test15() {
 			System.out.print("f() = ");
-			System.out.println(f());
+			logger.debug(f());
 		}
 
 		int f() {
 			try {
-				System.out.println("try");
+				logger.debug("try");
 				// JBook semantics don't support constructor with arg for
 				// exceptions
 				// throw new RuntimeException("abc");
 				throw new RuntimeException();
 			} finally {
-				System.out.println("finally");
+				logger.debug("finally");
 				if (true)
 					return 3;
 			}
@@ -418,28 +420,28 @@ public class Chapter14 extends ExtendTemplateMethod {
 	@Override
 	public void implementionFifteen(String[] args) throws Exception {
 		new test15();
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
 	class test16 {
 		test16() {
 			System.out.print("f() = ");
-			System.out.println(f());
+			logger.debug(f());
 		}
 
 		int f() {
 			try {
-				System.out.println("try");
+				logger.debug("try");
 				// JBook semantics don't support constructor with arg for
 				// exceptions
 				// throw new RuntimeException("abc");
 				throw new RuntimeException();
 			} catch (RuntimeException e) {
-				System.out.println(e.toString());
+				logger.debug(e.toString());
 				return 2;
 			} finally {
-				System.out.println("finally");
+				logger.debug("finally");
 				if (true)
 					return 3;
 			}
@@ -449,14 +451,14 @@ public class Chapter14 extends ExtendTemplateMethod {
 	@Override
 	public void implementionSixteen(String[] args) throws Exception {
 		new test16();
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
 	class test17 {
 		test17() {
 			System.out.print("f() = ");
-			System.out.println(f());
+			logger.debug(f());
 		}
 
 		String f() {
@@ -467,14 +469,14 @@ public class Chapter14 extends ExtendTemplateMethod {
 	@Override
 	public void implementionSeventeen(String[] args) throws Exception {
 		new test17();
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
 	class test18 {
 		test18() {
 			System.out.print("f() = ");
-			System.out.println(f().toString());
+			logger.debug(f().toString());
 		}
 
 		RuntimeException f() {
@@ -487,14 +489,14 @@ public class Chapter14 extends ExtendTemplateMethod {
 	@Override
 	public void implementionEighteen(String[] args) throws Exception {
 		new test18();
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
 	class test19 {
 		test19() {
 			System.out.print("f() = ");
-			System.out.println(f().toString());
+			logger.debug(f().toString());
 		}
 
 		RuntimeException f() {
@@ -511,7 +513,7 @@ public class Chapter14 extends ExtendTemplateMethod {
 	@Override
 	public void implementionNineteen(String[] args) throws Exception {
 		new test19();
-		System.out.println("Done!");
+		logger.debug("Done!");
 	}
 
 	class main {
@@ -522,11 +524,11 @@ public class Chapter14 extends ExtendTemplateMethod {
 			try {
 				int b = 2;
 				System.out.print("try: b = ");
-				System.out.println(b);
+				logger.debug(b);
 				return;
 			} finally {
 				System.out.print("finally: b = ");
-				System.out.println(b);
+				logger.debug(b);
 			}
 		}
 	}
@@ -534,7 +536,108 @@ public class Chapter14 extends ExtendTemplateMethod {
 	@Override
 	public void implementionTwenty(String[] args) throws Exception {
 		new main();
-		System.out.println("Done!");
+		logger.debug("Done!");
+
+	}
+
+	@Override
+	public void implementorOne(String[] args) throws Exception {
+		Test t = new Test();
+
+		synchronized (t) {
+			synchronized (t) {
+				logger.debug("made it!");
+			}
+		}
+		t = null;
+		synchronized (t) {
+			synchronized (t) {
+				logger.debug("made it!");
+			}
+		}
+
+	}
+
+	static class BlewIt extends Exception {
+		BlewIt() {
+		}
+
+		BlewIt(String s) {
+			super(s);
+		}
+	}
+
+	static void blowUp() throws BlewIt {
+		throw new BlewIt();
+	}
+
+	@Override
+	public void implementorTwo(String[] args) throws Exception {
+		try {
+			blowUp();
+		} catch (RuntimeException r) {
+			logger.debug("RuntimeException:" + r);
+		} catch (BlewIt b) {
+			logger.debug("BlewIt");
+		}
+
+	}
+
+	static void blowUpNull() throws BlewIt {
+		throw new NullPointerException();
+	}
+
+	@Override
+	public void implementorThree(String[] args) throws Exception {
+		try {
+			blowUpNull();
+		} catch (BlewIt b) {
+			logger.debug("Caught BlewIt");
+		} finally {
+			logger.debug("Uncaught Exception");
+		}
+
+	}
+
+	@Override
+	public void implementorFour(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementorFive(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementorSix(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementorSeven(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementorEight(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementorNine(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void implementorTen(String[] args) throws Exception {
+		// TODO Auto-generated method stub
 
 	}
 }

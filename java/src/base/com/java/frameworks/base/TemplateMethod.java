@@ -477,4 +477,8 @@ public abstract class TemplateMethod {
 	public abstract void implementionNine(String[] args) throws Exception;
 
 	public abstract void implementionTen(String[] args) throws Exception;
+
+	protected void exit() {
+		System.exit(0);
+	}
 }

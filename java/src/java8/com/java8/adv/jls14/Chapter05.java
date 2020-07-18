@@ -32,23 +32,23 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 		int i = (int) 12.5f;
 
 		// String conversion (5.4) of i's int value:
-		System.out.println("(int)12.5f==" + i);
+		logger.debug("(int)12.5f==" + i);
 
 		// Assignment conversion (5.2) of i's value to type
 		// float. This is a widening conversion (5.1.2):
 		float f = i;
 
 		// String conversion of f's float value:
-		System.out.println("after float widening: " + f);
+		logger.debug("after float widening: " + f);
 
 		// Numeric promotion (5.6) of i's value to type
 		// float. This is a binary numeric promotion.
 		// After promotion, the operation is float*float:
-		System.out.print(f);
+		logger.debug(f);
 		f = f * i;
 
 		// Two string conversions of i and f:
-		System.out.println("*" + i + "==" + f);
+		logger.debug("*" + i + "==" + f);
 
 		// Invocation conversion (5.3) of f's value
 		// to type double, needed because the method Math.sin
@@ -56,7 +56,7 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 		double d = Math.sin(f);
 
 		// Two string conversions of f and d:
-		System.out.println("Math.sin(" + f + ")==" + d);
+		logger.debug("Math.sin(" + f + ")==" + d);
 
 	}
 
@@ -68,28 +68,28 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 	public static void narrowingAndWidening() {
 		int big = 1234567890;
 		float approx = big;
-		System.out.println(big - (int) approx);
+		logger.debug(big - (int) approx);
 		float fmin = Float.NEGATIVE_INFINITY;
 		float fmax = Float.POSITIVE_INFINITY;
-		System.out.println("long: " + (long) fmin + ".." + (long) fmax);
-		System.out.println("int: " + (int) fmin + ".." + (int) fmax);
-		System.out.println("short: " + (short) fmin + ".." + (short) fmax);
-		System.out.println("char: " + (int) (char) fmin + ".."
+		logger.debug("long: " + (long) fmin + ".." + (long) fmax);
+		logger.debug("int: " + (int) fmin + ".." + (int) fmax);
+		logger.debug("short: " + (short) fmin + ".." + (short) fmax);
+		logger.debug("char: " + (int) (char) fmin + ".."
 				+ (int) (char) fmax);
-		System.out.println("byte: " + (byte) fmin + ".." + (byte) fmax);
+		logger.debug("byte: " + (byte) fmin + ".." + (byte) fmax);
 		// A narrowing of int to short loses high bits:
-		System.out.println("(short)0x12345678==0x"
+		logger.debug("(short)0x12345678==0x"
 				+ Integer.toHexString((short) 0x12345678));
 		// An int value too big for byte changes sign and magnitude:
-		System.out.println("(byte)255==" + (byte) 255);
+		logger.debug("(byte)255==" + (byte) 255);
 		// A float value too big to fit gives largest int value:
-		System.out.println("(int)1e20f==" + (int) 1e20f);
+		logger.debug("(int)1e20f==" + (int) 1e20f);
 		// A NaN converted to int yields zero:
-		System.out.println("(int)NaN==" + (int) Float.NaN);
+		logger.debug("(int)NaN==" + (int) Float.NaN);
 		// A double value too large for float yields infinity:
-		System.out.println("(float)-1e100==" + (float) -1e100);
+		logger.debug("(float)-1e100==" + (float) -1e100);
 		// A double value too small for float underflows to zero:
-		System.out.println("(float)1e-50==" + (float) 1e-50);
+		logger.debug("(float)1e-50==" + (float) 1e-50);
 	}
 
 	@Override
@@ -101,13 +101,13 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 	public static void assignmentConversions() {
 		short s = 12; // narrow 12 to short
 		float f = s; // widen short to float
-		System.out.println("f=" + f);
+		logger.debug("f=" + f);
 		char c = '\u0123';
 		long l = c; // widen char to long
-		System.out.println("l=0x" + Long.toString(l, 16));
+		logger.debug("l=0x" + Long.toString(l, 16));
 		f = 1.23f;
 		double d = f; // widen float to double
-		System.out.println("d=" + d);
+		logger.debug("d=" + d);
 	}
 
 	@Override
@@ -199,10 +199,10 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 		pa[0] = new ColoredPoint(2, 2, 12);
 		pa[1] = new ColoredPoint(4, 5, 24);
 		ColoredPoint[] cpa = (ColoredPoint[]) pa;
-		System.out.print("cpa: {");
+		logger.debug("cpa: {");
 		for (int i = 0; i < cpa.length; i++)
-			System.out.print((i == 0 ? " " : ", ") + cpa[i]);
-		System.out.println(" }");
+			logger.debug((i == 0 ? " " : ", ") + cpa[i]);
+		logger.debug(" }");
 	}
 
 	@Override
@@ -223,13 +223,13 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 		char c = '\u0001';
 		a[c] = 1; // index expression promotion
 		a[0] = -c; // unary - promotion
-		System.out.println("a: " + a[0] + "," + a[1]);
+		logger.debug("a: " + a[0] + "," + a[1]);
 		b = -1;
 		int i = ~b; // bitwise complement promotion
-		System.out.println("~0x" + Integer.toHexString(b) + "==0x"
+		logger.debug("~0x" + Integer.toHexString(b) + "==0x"
 				+ Integer.toHexString(i));
 		i = b << 4L; // shift promotion (left operand)
-		System.out.println("0x" + Integer.toHexString(b) + "<<4L==0x"
+		logger.debug("0x" + Integer.toHexString(b) + "<<4L==0x"
 				+ Integer.toHexString(i));
 	}
 
@@ -240,17 +240,17 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 		// First int*float is promoted to float*float, then
 		// float==double is promoted to double==double:
 		if (i * f == d)
-			System.out.println("oops");
+			logger.debug("oops");
 
 		// A char&byte is promoted to int&int:
 		byte b = 0x1f;
 		char c = 'G';
 		int control = c & b;
-		System.out.println(Integer.toHexString(control));
+		logger.debug(Integer.toHexString(control));
 
 		// Here int:float is promoted to float:float:
 		f = (b == 0) ? i : 4.0f;
-		System.out.println(1.0 / f);
+		logger.debug(1.0 / f);
 	}
 
 	@Override
@@ -271,7 +271,7 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 
 		// The following line will throw a ClassCastException:
 		ColoredPoint[] cpa = (ColoredPoint[]) pa;
-		System.out.println(cpa[0]);
+		logger.debug(cpa[0]);
 
 		int[] shortvec = new int[2];
 		Object o = shortvec;
@@ -309,57 +309,57 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 	 */
 	@Override
 	public void implementorTwo(String[] args) throws Exception {
-		System.out.print("");
-		System.out.print((byte) (byte) 100);
-		System.out.print(" ");
-		System.out.print((byte) (short) 1000);
-		System.out.print(" ");
-		System.out.print((byte) (int) 1000000);
-		System.out.print(" ");
-		System.out.print((byte) (long) 9000000000L);
-		System.out.print(" ");
-		System.out.println((byte) (char) 50000);
-		System.out.print("");
-		System.out.print((short) (byte) 100);
-		System.out.print(" ");
-		System.out.print((short) (short) 1000);
-		System.out.print(" ");
-		System.out.print((short) (int) 1000000);
-		System.out.print(" ");
-		System.out.print((short) (long) 9000000000L);
-		System.out.print(" ");
-		System.out.println((short) (char) 50000);
-		System.out.print("");
-		System.out.print((int) (byte) 100);
-		System.out.print(" ");
-		System.out.print((int) (short) 1000);
-		System.out.print(" ");
-		System.out.print((int) (int) 1000000);
-		System.out.print(" ");
-		System.out.print((int) (long) 9000000000L);
-		System.out.print(" ");
-		System.out.println((int) (char) 50000);
-		System.out.print("");
-		System.out.print((long) (byte) 100);
-		System.out.print(" ");
-		System.out.print((long) (short) 1000);
-		System.out.print(" ");
-		System.out.print((long) (int) 1000000);
-		System.out.print(" ");
-		System.out.print((long) (long) 9000000000L);
-		System.out.print(" ");
-		System.out.println((long) (char) 50000);
-		System.out.print("");
-		System.out.print((int) (char) (byte) 100);
-		System.out.print(" ");
-		System.out.print((int) (char) (short) 1000);
-		System.out.print(" ");
-		System.out.print((int) (char) (int) 1000000);
-		System.out.print(" ");
-		System.out.print((int) (char) (long) 9000000000L);
-		System.out.print(" ");
-		System.out.println((int) (char) (char) 50000);
-		System.out.println("Done!");
+		logger.debug("");
+		logger.debug((byte) (byte) 100);
+		logger.debug(" ");
+		logger.debug((byte) (short) 1000);
+		logger.debug(" ");
+		logger.debug((byte) (int) 1000000);
+		logger.debug(" ");
+		logger.debug((byte) (long) 9000000000L);
+		logger.debug(" ");
+		logger.debug((byte) (char) 50000);
+		logger.debug("");
+		logger.debug((short) (byte) 100);
+		logger.debug(" ");
+		logger.debug((short) (short) 1000);
+		logger.debug(" ");
+		logger.debug((short) (int) 1000000);
+		logger.debug(" ");
+		logger.debug((short) (long) 9000000000L);
+		logger.debug(" ");
+		logger.debug((short) (char) 50000);
+		logger.debug("");
+		logger.debug((int) (byte) 100);
+		logger.debug(" ");
+		logger.debug((int) (short) 1000);
+		logger.debug(" ");
+		logger.debug((int) (int) 1000000);
+		logger.debug(" ");
+		logger.debug((int) (long) 9000000000L);
+		logger.debug(" ");
+		logger.debug((int) (char) 50000);
+		logger.debug("");
+		logger.debug((long) (byte) 100);
+		logger.debug(" ");
+		logger.debug((long) (short) 1000);
+		logger.debug(" ");
+		logger.debug((long) (int) 1000000);
+		logger.debug(" ");
+		logger.debug((long) (long) 9000000000L);
+		logger.debug(" ");
+		logger.debug((long) (char) 50000);
+		logger.debug("");
+		logger.debug((int) (char) (byte) 100);
+		logger.debug(" ");
+		logger.debug((int) (char) (short) 1000);
+		logger.debug(" ");
+		logger.debug((int) (char) (int) 1000000);
+		logger.debug(" ");
+		logger.debug((int) (char) (long) 9000000000L);
+		logger.debug(" ");
+		logger.debug((int) (char) (char) 50000);
+		logger.debug("Done!");
 
 	}
 
@@ -373,17 +373,17 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 		int i = (int) 1000000;
 		long l = (long) 9000000000L;
 		char ch = (char) 50000;
-		System.out.print("");
-		System.out.print(bt);
-		System.out.print(" ");
-		System.out.print(sh);
-		System.out.print(" ");
-		System.out.print(i);
-		System.out.print(" ");
-		System.out.print(l);
-		System.out.print(" ");
-		System.out.println((int) ch);
-		System.out.println("Done!");
+		logger.debug("");
+		logger.debug(bt);
+		logger.debug(" ");
+		logger.debug(sh);
+		logger.debug(" ");
+		logger.debug(i);
+		logger.debug(" ");
+		logger.debug(l);
+		logger.debug(" ");
+		logger.debug((int) ch);
+		logger.debug("Done!");
 
 	}
 
@@ -399,21 +399,21 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 		char ch1 = 50000;
 		char ch2 = 'z';
 		char ch3 = 100;
-		System.out.print("");
-		System.out.print(bt);
-		System.out.print(" ");
-		System.out.print(sh);
-		System.out.print(" ");
-		System.out.print(i);
-		System.out.print(" ");
-		System.out.print(l);
-		System.out.print(" ");
-		System.out.print((int) ch1);
-		System.out.print(" ");
-		System.out.print(ch2);
-		System.out.print(" ");
-		System.out.println(ch3);
-		System.out.println("Done!");
+		logger.debug("");
+		logger.debug(bt);
+		logger.debug(" ");
+		logger.debug(sh);
+		logger.debug(" ");
+		logger.debug(i);
+		logger.debug(" ");
+		logger.debug(l);
+		logger.debug(" ");
+		logger.debug((int) ch1);
+		logger.debug(" ");
+		logger.debug(ch2);
+		logger.debug(" ");
+		logger.debug(ch3);
+		logger.debug("Done!");
 
 	}
 
@@ -431,42 +431,42 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 			sc = (char) 'z';
 
 			// byte to others
-			System.out.print("");
-			System.out.print(fb(sb));
-			System.out.print(" ");
-			System.out.print(fs(sb));
-			System.out.print(" ");
-			System.out.print(fi(sb));
-			System.out.print(" ");
-			System.out.println(fl(sb));
+			logger.debug("");
+			logger.debug(fb(sb));
+			logger.debug(" ");
+			logger.debug(fs(sb));
+			logger.debug(" ");
+			logger.debug(fi(sb));
+			logger.debug(" ");
+			logger.debug(fl(sb));
 
 			// short to others
-			System.out.print("");
-			System.out.print(fs(ss));
-			System.out.print(" ");
-			System.out.print(fi(ss));
-			System.out.print(" ");
-			System.out.println(fl(ss));
+			logger.debug("");
+			logger.debug(fs(ss));
+			logger.debug(" ");
+			logger.debug(fi(ss));
+			logger.debug(" ");
+			logger.debug(fl(ss));
 
 			// int to others
-			System.out.print("");
-			System.out.print(fi(si));
-			System.out.print(" ");
-			System.out.println(fl(si));
+			logger.debug("");
+			logger.debug(fi(si));
+			logger.debug(" ");
+			logger.debug(fl(si));
 
 			// long to others
-			System.out.print("");
-			System.out.println(fl(sl));
+			logger.debug("");
+			logger.debug(fl(sl));
 
 			// char to others
-			System.out.print("");
-			System.out.print(fi(sc));
-			System.out.print(" ");
-			System.out.print(fl(sc));
-			System.out.print(" ");
-			System.out.println(fc(sc));
+			logger.debug("");
+			logger.debug(fi(sc));
+			logger.debug(" ");
+			logger.debug(fl(sc));
+			logger.debug(" ");
+			logger.debug(fc(sc));
 
-			System.out.println("Done!");
+			logger.debug("Done!");
 		}
 
 		byte fb(byte param) {
@@ -504,31 +504,31 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 	 */
 	@Override
 	public void implementorSix(String[] args) throws Exception {
-		System.out.print("");
-		System.out.print((+(short) 1000));
-		System.out.print(" ");
-		System.out.print((-(short) (-32768)));
-		System.out.print(" ");
-		System.out.println(((short) (-32768)));
-		System.out.print("");
-		System.out.print(((short) 10000 >> (short) 2));
-		System.out.print(" ");
-		System.out.print(((short) 10000 << (short) 2));
-		System.out.print(" ");
-		System.out.println(((short) -10000 >>> (short) 2));
-		System.out.print("");
-		System.out.print((10000L >> (short) 2));
-		System.out.print(" ");
-		System.out.print((10000L << (short) 24));
-		System.out.print(" ");
-		System.out.println((-10000L >>> (short) 2));
-		System.out.print("");
-		System.out.print(((short) 10000 >> 2L));
-		System.out.print(" ");
-		System.out.print(((short) 10001 << 24L));
-		System.out.print(" ");
-		System.out.println(((short) -10000 >>> 2L));
-		System.out.println("Done!");
+		logger.debug("");
+		logger.debug((+(short) 1000));
+		logger.debug(" ");
+		logger.debug((-(short) (-32768)));
+		logger.debug(" ");
+		logger.debug(((short) (-32768)));
+		logger.debug("");
+		logger.debug(((short) 10000 >> (short) 2));
+		logger.debug(" ");
+		logger.debug(((short) 10000 << (short) 2));
+		logger.debug(" ");
+		logger.debug(((short) -10000 >>> (short) 2));
+		logger.debug("");
+		logger.debug((10000L >> (short) 2));
+		logger.debug(" ");
+		logger.debug((10000L << (short) 24));
+		logger.debug(" ");
+		logger.debug((-10000L >>> (short) 2));
+		logger.debug("");
+		logger.debug(((short) 10000 >> 2L));
+		logger.debug(" ");
+		logger.debug(((short) 10001 << 24L));
+		logger.debug(" ");
+		logger.debug(((short) -10000 >>> 2L));
+		logger.debug("Done!");
 
 	}
 
@@ -541,8 +541,8 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 		byte i = 5;
 		int[] v = new int[n];
 		v[i] = 200;
-		System.out.println(v[i]);
-		System.out.println("Done!");
+		logger.debug(v[i]);
+		logger.debug("Done!");
 
 	}
 
@@ -551,21 +551,21 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 	 */
 	@Override
 	public void implementorEight(String[] args) throws Exception {
-		System.out.println(((short) 1000) * (short) 1000);
-		System.out.println(((short) 1000) / (short) 1);
-		System.out.println(((short) 1000) % (short) 1000);
-		System.out.println(((short) 30000) + (short) 30000);
-		System.out.println(((short) -30000) - (short) -30000);
-		System.out.println(((short) 1000) < (short) 1000);
-		System.out.println(((short) 1000) <= (short) 1000);
-		System.out.println(((short) 1000) > (short) 1000);
-		System.out.println(((short) 1000) >= (short) 1000);
-		System.out.println(((short) 1000) == (short) 1000);
-		System.out.println(((short) 1000) != (short) 1000);
-		System.out.println(((short) -32768) & (short) -16384);
-		System.out.println(((short) -32768) ^ (short) -16384);
-		System.out.println(((short) 1000) | (short) 1000);
-		System.out.println("Done!");
+		logger.debug(((short) 1000) * (short) 1000);
+		logger.debug(((short) 1000) / (short) 1);
+		logger.debug(((short) 1000) % (short) 1000);
+		logger.debug(((short) 30000) + (short) 30000);
+		logger.debug(((short) -30000) - (short) -30000);
+		logger.debug(((short) 1000) < (short) 1000);
+		logger.debug(((short) 1000) <= (short) 1000);
+		logger.debug(((short) 1000) > (short) 1000);
+		logger.debug(((short) 1000) >= (short) 1000);
+		logger.debug(((short) 1000) == (short) 1000);
+		logger.debug(((short) 1000) != (short) 1000);
+		logger.debug(((short) -32768) & (short) -16384);
+		logger.debug(((short) -32768) ^ (short) -16384);
+		logger.debug(((short) 1000) | (short) 1000);
+		logger.debug("Done!");
 
 	}
 
@@ -574,18 +574,18 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 	 */
 	@Override
 	public void implementorNine(String[] args) throws Exception {
-		System.out.println(((byte) 127) * ((byte) 127));
-		System.out.println(((short) 1000) * ((short) 1000));
-		System.out.println(((char) 50000) * ((char) 50000));
-		System.out.println(((byte) 127) * ((short) 1000));
-		System.out.println(((short) 1000) * ((byte) 127));
-		System.out.println(((short) 1000) * 1234567);
-		System.out.println(1234567 * ((short) 1000));
-		System.out.println(((short) 1000) * 123456789L);
-		System.out.println(123456789L * ((short) 1000));
-		System.out.println(1000 * 123456789L);
-		System.out.println(1000 * 123456789L);
-		System.out.println("Done!");
+		logger.debug(((byte) 127) * ((byte) 127));
+		logger.debug(((short) 1000) * ((short) 1000));
+		logger.debug(((char) 50000) * ((char) 50000));
+		logger.debug(((byte) 127) * ((short) 1000));
+		logger.debug(((short) 1000) * ((byte) 127));
+		logger.debug(((short) 1000) * 1234567);
+		logger.debug(1234567 * ((short) 1000));
+		logger.debug(((short) 1000) * 123456789L);
+		logger.debug(123456789L * ((short) 1000));
+		logger.debug(1000 * 123456789L);
+		logger.debug(1000 * 123456789L);
+		logger.debug("Done!");
 
 	}
 
@@ -615,16 +615,16 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 		int ir = true ? i : i;
 		long lr = true ? l : l;
 		char cr = true ? c : c;
-		System.out.print("");
-		System.out.print(br);
-		System.out.print(" ");
-		System.out.print(sr);
-		System.out.print(" ");
-		System.out.print(ir);
-		System.out.print(" ");
-		System.out.print(lr);
-		System.out.print(" ");
-		System.out.println(cr);
+		logger.debug("");
+		logger.debug(br);
+		logger.debug(" ");
+		logger.debug(sr);
+		logger.debug(" ");
+		logger.debug(ir);
+		logger.debug(" ");
+		logger.debug(lr);
+		logger.debug(" ");
+		logger.debug(cr);
 
 		// case 2
 		sr = false ? b : s;
@@ -632,16 +632,16 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 		lr = false ? b : l;
 		int ir2 = false ? c : s;
 		short sr2 = false ? s : b;
-		System.out.print("");
-		System.out.print(sr);
-		System.out.print(" ");
-		System.out.print(ir);
-		System.out.print(" ");
-		System.out.print(lr);
-		System.out.print(" ");
-		System.out.print(ir2);
-		System.out.print(" ");
-		System.out.println(sr2);
+		logger.debug("");
+		logger.debug(sr);
+		logger.debug(" ");
+		logger.debug(ir);
+		logger.debug(" ");
+		logger.debug(lr);
+		logger.debug(" ");
+		logger.debug(ir2);
+		logger.debug(" ");
+		logger.debug(sr2);
 
 		// case 3
 		br = true ? b : 101;
@@ -650,20 +650,20 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 		lr = true ? l : 101;
 		cr = true ? c : 101;
 		byte br2 = true ? 101 : b;
-		System.out.print("");
-		System.out.print(br);
-		System.out.print(" ");
-		System.out.print(sr);
-		System.out.print(" ");
-		System.out.print(ir);
-		System.out.print(" ");
-		System.out.print(lr);
-		System.out.print(" ");
-		System.out.print(cr);
-		System.out.print(" ");
-		System.out.println(br2);
+		logger.debug("");
+		logger.debug(br);
+		logger.debug(" ");
+		logger.debug(sr);
+		logger.debug(" ");
+		logger.debug(ir);
+		logger.debug(" ");
+		logger.debug(lr);
+		logger.debug(" ");
+		logger.debug(cr);
+		logger.debug(" ");
+		logger.debug(br2);
 
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
@@ -681,18 +681,18 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 		s4--;
 		b--;
 		c++;
-		System.out.print("");
-		System.out.print(s1);
-		System.out.print(" ");
-		System.out.print(s2);
-		System.out.print(" ");
-		System.out.print(s3);
-		System.out.print(" ");
-		System.out.print(s4);
-		System.out.print(" ");
-		System.out.print(b);
-		System.out.print(" ");
-		System.out.println((int) c);
+		logger.debug("");
+		logger.debug(s1);
+		logger.debug(" ");
+		logger.debug(s2);
+		logger.debug(" ");
+		logger.debug(s3);
+		logger.debug(" ");
+		logger.debug(s4);
+		logger.debug(" ");
+		logger.debug(b);
+		logger.debug(" ");
+		logger.debug((int) c);
 
 		s1 = 32767;
 		s2 = -32768;
@@ -706,20 +706,20 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 		s4--;
 		b--;
 		c--;
-		System.out.print("");
-		System.out.print(s1);
-		System.out.print(" ");
-		System.out.print(s2);
-		System.out.print(" ");
-		System.out.print(s3);
-		System.out.print(" ");
-		System.out.print(s4);
-		System.out.print(" ");
-		System.out.print(b);
-		System.out.print(" ");
-		System.out.println((int) c);
+		logger.debug("");
+		logger.debug(s1);
+		logger.debug(" ");
+		logger.debug(s2);
+		logger.debug(" ");
+		logger.debug(s3);
+		logger.debug(" ");
+		logger.debug(s4);
+		logger.debug(" ");
+		logger.debug(b);
+		logger.debug(" ");
+		logger.debug((int) c);
 
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
@@ -729,29 +729,29 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 	@Override
 	public void implementorTwelve(String[] args) throws Exception {
 		short s = 32767;
-		System.out.println((s += 32767));
+		logger.debug((s += 32767));
 		s = 32767;
-		System.out.println(s -= 1000000);
+		logger.debug(s -= 1000000);
 		s = 32767;
-		System.out.println(s *= 200);
+		logger.debug(s *= 200);
 		s = 32767;
-		System.out.println(s /= 4);
+		logger.debug(s /= 4);
 		s = -32768;
-		System.out.println(s &= 32768);
+		logger.debug(s &= 32768);
 		s = 32767;
-		System.out.println(s |= 100000);
+		logger.debug(s |= 100000);
 		s = 32767;
-		System.out.println(s ^= 65537);
+		logger.debug(s ^= 65537);
 		s = 32767;
-		System.out.println(s %= 1);
+		logger.debug(s %= 1);
 		s = 32767;
-		System.out.println(s <<= 2);
+		logger.debug(s <<= 2);
 		s = 32767;
-		System.out.println(s >>= 2);
+		logger.debug(s >>= 2);
 		s = 32767;
-		System.out.println(s >>>= 2);
+		logger.debug(s >>>= 2);
 
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
@@ -761,17 +761,17 @@ public class Chapter05 extends TemplateMethod implements IExtendTemplateMethod
 	@Override
 	public void implementorThirteen(String[] args) throws Exception {
 		byte b = 127;
-		System.out.println((b += 100));
+		logger.debug((b += 100));
 		short s = 30000;
-		System.out.println((s += 10000));
+		logger.debug((s += 10000));
 		int i = 2000000000;
-		System.out.println((i += 2000000000));
+		logger.debug((i += 2000000000));
 		long l = 2000000000;
-		System.out.println((l += 2000000000));
+		logger.debug((l += 2000000000));
 		char c = 50000;
-		System.out.println((int) (c += 50000));
+		logger.debug((int) (c += 50000));
 
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 

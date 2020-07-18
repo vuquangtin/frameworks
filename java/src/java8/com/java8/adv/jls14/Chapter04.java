@@ -26,13 +26,13 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 	@Override
 	public void implementionOne(String[] args) throws Exception {
 		int a = 10;
-		System.out.print("a   = ");
-		System.out.println(a);
-		System.out.print("+a  = ");
-		System.out.println((+a));
-		System.out.print("-a  = ");
-		System.out.println((-a));
-		System.out.println("Done!");
+		logger.debug("a   = ");
+		logger.debug(a);
+		logger.debug("+a  = ");
+		logger.debug((+a));
+		logger.debug("-a  = ");
+		logger.debug((-a));
+		logger.debug("Done!");
 
 	}
 
@@ -42,17 +42,17 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 	@Override
 	public void implementionTwo(String[] args) throws Exception {
 		int a = 10;
-		System.out.print("a   = ");
-		System.out.println(a);
-		System.out.print("++a = ");
-		System.out.println((++a));
-		System.out.print("a   = ");
-		System.out.println(a);
-		System.out.print("--a = ");
-		System.out.println((--a));
-		System.out.print("a   = ");
-		System.out.println(a);
-		System.out.println("Done!");
+		logger.debug("a   = ");
+		logger.debug(a);
+		logger.debug("++a = ");
+		logger.debug((++a));
+		logger.debug("a   = ");
+		logger.debug(a);
+		logger.debug("--a = ");
+		logger.debug((--a));
+		logger.debug("a   = ");
+		logger.debug(a);
+		logger.debug("Done!");
 
 	}
 
@@ -62,17 +62,17 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 	@Override
 	public void implementionThree(String[] args) throws Exception {
 		int a = 10;
-		System.out.print("a   = ");
-		System.out.println(a);
-		System.out.print("a++ = ");
-		System.out.println((a++));
-		System.out.print("a   = ");
-		System.out.println(a);
-		System.out.print("a-- = ");
-		System.out.println((a--));
-		System.out.print("a   = ");
-		System.out.println(a);
-		System.out.println("Done!");
+		logger.debug("a   = ");
+		logger.debug(a);
+		logger.debug("a++ = ");
+		logger.debug((a++));
+		logger.debug("a   = ");
+		logger.debug(a);
+		logger.debug("a-- = ");
+		logger.debug((a--));
+		logger.debug("a   = ");
+		logger.debug(a);
+		logger.debug("Done!");
 
 	}
 
@@ -80,9 +80,9 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 
 		void printAll(String[] vs, int[] v) {
 			for (int i = 0; i < nrOps; i++) {
-				System.out.print(vs[i]);
-				System.out.print(" = ");
-				System.out.println(v[i]);
+				logger.debug(vs[i]);
+				logger.debug(" = ");
+				logger.debug(v[i]);
 			}
 		}
 
@@ -120,7 +120,7 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 			v[i++] = 9 % 3;
 
 			printAll(vs, v);
-			System.out.println("Done!");
+			logger.debug("Done!");
 		}
 	}
 
@@ -137,9 +137,9 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 
 		void printAll(String[] vs, int[] v) {
 			for (int i = 0; i < nrOps; i++) {
-				System.out.print(vs[i]);
-				System.out.print(" = ");
-				System.out.println(v[i]);
+				logger.debug(vs[i]);
+				logger.debug(" = ");
+				logger.debug(v[i]);
 			}
 		}
 
@@ -191,7 +191,7 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 			v[i++] = ~9;
 
 			printAll(vs, v);
-			System.out.println("Done!");
+			logger.debug("Done!");
 		}
 	}
 
@@ -208,9 +208,9 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 
 		void printAll(String[] vs, int[] v) {
 			for (int i = 0; i < nrOps; i++) {
-				System.out.print(vs[i]);
-				System.out.print(" = ");
-				System.out.println(v[i]);
+				logger.debug(vs[i]);
+				logger.debug(" = ");
+				logger.debug(v[i]);
 			}
 		}
 
@@ -241,7 +241,7 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 			v[i++] = 9 > 3 ? 9 : 3;
 
 			printAll(vs, v);
-			System.out.println("Done!");
+			logger.debug("Done!");
 		}
 	}
 
@@ -258,9 +258,9 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 
 		void printAllB(String[] vs, boolean[] v) {
 			for (int i = 0; i < nrOps; i++) {
-				System.out.print(vs[i]);
-				System.out.print(" = ");
-				System.out.println(v[i]);
+				logger.debug(vs[i]);
+				logger.debug(" = ");
+				logger.debug(v[i]);
 			}
 		}
 
@@ -301,7 +301,7 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 			vb[i++] = 9 >= 3;
 
 			printAllB(vs, vb);
-			System.out.println("Done!");
+			logger.debug("Done!");
 		}
 	}
 
@@ -318,9 +318,9 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 
 		void printAll(String[] vs, int[] v) {
 			for (int i = 0; i < v.length; i++) {
-				System.out.print(vs[i]);
-				System.out.print(" = ");
-				System.out.println(v[i]);
+				logger.debug(vs[i]);
+				logger.debug(" = ");
+				logger.debug(v[i]);
 			}
 		}
 
@@ -365,7 +365,7 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 			v[i++] = -9 >>> -2;
 
 			printAll(vs, v);
-			System.out.println("Done!");
+			logger.debug("Done!");
 		}
 	}
 
@@ -385,9 +385,9 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 	public void implementionNine(String[] args) throws Exception {
 		int a = 9;
 		a += 3;
-		System.out.print("9 += 3  =>  ");
-		System.out.println(a);
-		System.out.println("Done!");
+		logger.debug("9 += 3  =>  ");
+		logger.debug(a);
+		logger.debug("Done!");
 
 	}
 
@@ -395,9 +395,9 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 
 		void printAll(String[] vs, int[] v) {
 			for (int i = 0; i < v.length; i++) {
-				System.out.print(vs[i]);
-				System.out.print("  =>  ");
-				System.out.println(v[i]);
+				logger.debug(vs[i]);
+				logger.debug("  =>  ");
+				logger.debug(v[i]);
 			}
 		}
 
@@ -446,7 +446,7 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 			v[i++] >>>= 3;
 
 			printAll(vs, v);
-			System.out.println("Done!");
+			logger.debug("Done!");
 		}
 	}
 
@@ -463,9 +463,9 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 
 		void printAll(String[] vs, int[] v) {
 			for (int i = 0; i < nrOps; i++) {
-				System.out.print(vs[i]);
-				System.out.print(" = ");
-				System.out.println(v[i]);
+				logger.debug(vs[i]);
+				logger.debug(" = ");
+				logger.debug(v[i]);
 			}
 		}
 
@@ -518,7 +518,7 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 			v[i++] = 3 << 31;
 
 			printAll(vs, v);
-			System.out.println("Done!");
+			logger.debug("Done!");
 		}
 	}
 
@@ -535,9 +535,9 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 
 		void printAll(String[] vs, long[] v) {
 			for (int i = 0; i < nrOps; i++) {
-				System.out.print(vs[i]);
-				System.out.print(" = ");
-				System.out.println(v[i]);
+				logger.debug(vs[i]);
+				logger.debug(" = ");
+				logger.debug(v[i]);
 			}
 		}
 
@@ -627,7 +627,7 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 			v[i++] = 9L > 3L ? 9L : 3L;
 
 			printAll(vs, v);
-			System.out.println("Done!");
+			logger.debug("Done!");
 		}
 	}
 
@@ -644,9 +644,9 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 
 		void printAllB(String[] vs, boolean[] v) {
 			for (int i = 0; i < nrOps; i++) {
-				System.out.print(vs[i]);
-				System.out.print(" = ");
-				System.out.println(v[i]);
+				logger.debug(vs[i]);
+				logger.debug(" = ");
+				logger.debug(v[i]);
 			}
 		}
 
@@ -687,7 +687,7 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 			vb[i++] = 9L >= 3L;
 
 			printAllB(vs, vb);
-			System.out.println("Done!");
+			logger.debug("Done!");
 		}
 	}
 
@@ -704,9 +704,9 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 
 		void printAll(String[] vs, long[] v) {
 			for (int i = 0; i < v.length; i++) {
-				System.out.print(vs[i]);
-				System.out.print(" = ");
-				System.out.println(v[i]);
+				logger.debug(vs[i]);
+				logger.debug(" = ");
+				logger.debug(v[i]);
 			}
 		}
 
@@ -751,7 +751,7 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 			v[i++] = -9L >>> -2L;
 
 			printAll(vs, v);
-			System.out.println("Done!");
+			logger.debug("Done!");
 		}
 	}
 
@@ -768,9 +768,9 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 
 		void printAll(String[] vs, long[] v) {
 			for (int i = 0; i < v.length; i++) {
-				System.out.print(vs[i]);
-				System.out.print("  =>  ");
-				System.out.println(v[i]);
+				logger.debug(vs[i]);
+				logger.debug("  =>  ");
+				logger.debug(v[i]);
 			}
 		}
 
@@ -819,7 +819,7 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 			v[i++] >>>= 3L;
 
 			printAll(vs, v);
-			System.out.println("Done!");
+			logger.debug("Done!");
 		}
 	}
 
@@ -836,9 +836,9 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 
 		void printAll(String[] vs, long[] v) {
 			for (int i = 0; i < nrOps; i++) {
-				System.out.print(vs[i]);
-				System.out.print(" = ");
-				System.out.println(v[i]);
+				logger.debug(vs[i]);
+				logger.debug(" = ");
+				logger.debug(v[i]);
 			}
 		}
 
@@ -891,7 +891,7 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 			v[i++] = 3L << 63L;
 
 			printAll(vs, v);
-			System.out.println("Done!");
+			logger.debug("Done!");
 		}
 	}
 
@@ -908,9 +908,9 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 
 		void printAllB(String[] vs, boolean[] v) {
 			for (int i = 0; i < nrOps; i++) {
-				System.out.print(vs[i]);
-				System.out.print(" = ");
-				System.out.println(v[i]);
+				logger.debug(vs[i]);
+				logger.debug(" = ");
+				logger.debug(v[i]);
 			}
 		}
 
@@ -955,7 +955,7 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 			vb[i++] = !true;
 
 			printAllB(vs, vb);
-			System.out.println("Done!");
+			logger.debug("Done!");
 		}
 	}
 
@@ -971,24 +971,24 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 	class main17 {
 
 		main17(String[] args) {
-			System.out.print("false && true       = ");
-			System.out.println((false && true));
-			System.out.print("true && false       = ");
-			System.out.println((true && false));
-			System.out.print("fFalse() && fTrue() = ");
-			System.out.println((fFalse() && fTrue()));
-			System.out.print("fTrue() && fFalse() = ");
-			System.out.println((fTrue() && fFalse()));
-			System.out.println("Done!");
+			logger.debug("false && true       = ");
+			logger.debug((false && true));
+			logger.debug("true && false       = ");
+			logger.debug((true && false));
+			logger.debug("fFalse() && fTrue() = ");
+			logger.debug((fFalse() && fTrue()));
+			logger.debug("fTrue() && fFalse() = ");
+			logger.debug((fTrue() && fFalse()));
+			logger.debug("Done!");
 		}
 
 		boolean fTrue() {
-			System.out.println("fTrue()");
+			logger.debug("fTrue()");
 			return true;
 		}
 
 		boolean fFalse() {
-			System.out.println("fFalse()");
+			logger.debug("fFalse()");
 			return false;
 		}
 	}
@@ -1005,24 +1005,24 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 	class main18 {
 
 		main18(String[] args) {
-			System.out.print("true || false       = ");
-			System.out.println((true || false));
-			System.out.print("false || true       = ");
-			System.out.println((false || true));
-			System.out.print("fTrue() || fFalse() = ");
-			System.out.println((fTrue() || fFalse()));
-			System.out.print("fFalse() || fTrue() = ");
-			System.out.println((fFalse() || fTrue()));
-			System.out.println("Done!");
+			logger.debug("true || false       = ");
+			logger.debug((true || false));
+			logger.debug("false || true       = ");
+			logger.debug((false || true));
+			logger.debug("fTrue() || fFalse() = ");
+			logger.debug((fTrue() || fFalse()));
+			logger.debug("fFalse() || fTrue() = ");
+			logger.debug((fFalse() || fTrue()));
+			logger.debug("Done!");
 		}
 
 		boolean fTrue() {
-			System.out.println("fTrue()");
+			logger.debug("fTrue()");
 			return true;
 		}
 
 		boolean fFalse() {
-			System.out.println("fFalse()");
+			logger.debug("fFalse()");
 			return false;
 		}
 	}
@@ -1042,13 +1042,13 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 	@Override
 	public void implementionTwenty(String[] args) throws Exception {
 		boolean b1 = false, b2 = false, b3 = false;
-		System.out.print("");
-		System.out.print((b1 &= true));
-		System.out.print(" ");
-		System.out.print((b2 |= true));
-		System.out.print(" ");
-		System.out.println((b3 ^= true));
-		System.out.println("Done!");
+		logger.debug("");
+		logger.debug((b1 &= true));
+		logger.debug(" ");
+		logger.debug((b2 |= true));
+		logger.debug(" ");
+		logger.debug((b3 ^= true));
+		logger.debug("Done!");
 
 	}
 
@@ -1093,73 +1093,73 @@ public class Chapter04 extends ExtendTemplateMethod implements ITemplateMethod {
 
 		void testEight(String[] x, int j) {
 			String sx = (x == null) ? "null" : "Strings";
-			System.out.println();
+			logger.debug("\n");
 			try {
-				System.out.print(sx);
-				System.out.print("[throw]+=throw => ");
+				logger.debug(sx);
+				logger.debug("[throw]+=throw => ");
 				x[indexThrow()] += stringThrow();
-				System.out.println("Okay!");
+				logger.debug("Okay!");
 			} catch (RuntimeException e) {
-				System.out.println(e);
+				logger.debug(e);
 			}
 			try {
-				System.out.print(sx);
-				System.out.print("[throw]+=\"heh\" => ");
+				logger.debug(sx);
+				logger.debug("[throw]+=\"heh\" => ");
 				x[indexThrow()] += "heh";
-				System.out.println("Okay!");
+				logger.debug("Okay!");
 			} catch (RuntimeException e) {
-				System.out.println(e);
+				logger.debug(e);
 			}
 			try {
-				System.out.print(sx);
-				System.out.print("[");
-				System.out.print(j);
-				System.out.print("]+=throw => ");
+				logger.debug(sx);
+				logger.debug("[");
+				logger.debug(j);
+				logger.debug("]+=throw => ");
 				x[j] += stringThrow();
-				System.out.println("Okay!");
+				logger.debug("Okay!");
 			} catch (RuntimeException e) {
-				System.out.println(e);
+				logger.debug(e);
 			}
 			try {
-				System.out.print(sx);
-				System.out.print("[");
-				System.out.print(j);
-				System.out.print("]+=\"heh\" => ");
+				logger.debug(sx);
+				logger.debug("[");
+				logger.debug(j);
+				logger.debug("]+=\"heh\" => ");
 				x[j] += "heh";
-				System.out.println("Okay!");
+				logger.debug("Okay!");
 			} catch (RuntimeException e) {
-				System.out.println(e);
+				logger.debug(e);
 			}
 		}
 
 		void main() {
 			try {
-				System.out.print("throw[throw]+=throw => ");
+				logger.debug("throw[throw]+=throw => ");
 				stringsThrow()[indexThrow()] += stringThrow();
-				System.out.println("Okay!");
+				logger.debug("Okay!");
 			} catch (RuntimeException e) {
-				System.out.println(e);
+				logger.debug(e);
 			}
 			try {
-				System.out.print("throw[throw]+=\"heh\" => ");
+				logger.debug("throw[throw]+=\"heh\" => ");
 				stringsThrow()[indexThrow()] += "heh";
-				System.out.println("Okay!");
+				logger.debug("Okay!");
 			} catch (RuntimeException e) {
-				System.out.println(e);
+				logger.debug(e);
 			}
 			try {
-				System.out.print("throw[1]+=throw => ");
+				logger.debug("throw[1]+=throw => ");
 				stringsThrow()[1] += stringThrow();
-				System.out.println("Okay!");
+				logger.debug("Okay!");
 			} catch (RuntimeException e) {
-				System.out.println(e);
+				logger.debug(e);
 			}
 			try {
-				System.out.print("throw[1]+=\"heh\" => ");
+				logger.debug("throw[1]+=\"heh\" => ");
 				stringsThrow()[1] += "heh";
-				System.out.println("Okay!");
+				logger.debug("Okay!");
 			} catch (RuntimeException e) {
-				System.out.println(e);
+				logger.debug(e);
 			}
 
 			testEight(null, 1);

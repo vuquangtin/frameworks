@@ -33,6 +33,7 @@ public abstract class ExtendTemplateMethod extends TemplateMethod {
 	}
 
 	public void runTemplateMethod(String[] args, boolean isLog) {
+		super.runTemplateMethod(args);
 		printDot("implementionEleven");
 		try {
 			implementionEleven(args);
@@ -123,7 +124,7 @@ public abstract class ExtendTemplateMethod extends TemplateMethod {
 			t.printStackTrace();
 			log(t);
 		}
-		super.runTemplateMethod(args);
+
 	}
 
 	public abstract void implementionEleven(String[] args) throws Exception;

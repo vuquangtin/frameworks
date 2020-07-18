@@ -22,7 +22,7 @@ public class Chapter12 extends TemplateMethod {
 	public void implementionOne(String[] args) throws Exception {
 		One o = null;
 		Two t = new Two();
-		System.out.println((Object) o == (Object) t);
+		logger.debug((Object) o == (Object) t);
 	}
 
 	@Override

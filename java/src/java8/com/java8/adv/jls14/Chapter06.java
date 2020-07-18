@@ -58,8 +58,8 @@ public class Chapter06 extends TemplateMethod {
 	 */
 	@Override
 	public void implementionOne(String[] args) throws Exception {
-		System.out.println(("ab" + "cde"));
-		System.out.println("Done!");
+		logger.debug(("ab" + "cde"));
+		logger.debug("Done!");
 
 	}
 
@@ -68,9 +68,9 @@ public class Chapter06 extends TemplateMethod {
 	 */
 	@Override
 	public void implementionTwo(String[] args) throws Exception {
-		System.out.println(("ab" + -12));
-		System.out.println((-12 + "cde"));
-		System.out.println("Done!");
+		logger.debug(("ab" + -12));
+		logger.debug((-12 + "cde"));
+		logger.debug("Done!");
 	}
 
 	/***
@@ -78,8 +78,8 @@ public class Chapter06 extends TemplateMethod {
 	 */
 	@Override
 	public void implementionThree(String[] args) throws Exception {
-		System.out.println(("" + true));
-		System.out.println("Done!");
+		logger.debug(("" + true));
+		logger.debug("Done!");
 
 	}
 
@@ -94,10 +94,10 @@ public class Chapter06 extends TemplateMethod {
 	 */
 	@Override
 	public void implementionFour(String[] args) throws Exception {
-		System.out.println(("" + new RuntimeException("re")));
-		System.out.println(("" + new AssertionError("ae")));
-		System.out.println(("" + new Ex("ex")));
-		System.out.println("Done!");
+		logger.debug(("" + new RuntimeException("re")));
+		logger.debug(("" + new AssertionError("ae")));
+		logger.debug(("" + new Ex("ex")));
+		logger.debug("Done!");
 
 	}
 
@@ -106,8 +106,8 @@ public class Chapter06 extends TemplateMethod {
 	 */
 	@Override
 	public void implementionFive(String[] args) throws Exception {
-		System.out.println(("" + null));
-		System.out.println("Done!");
+		logger.debug(("" + null));
+		logger.debug("Done!");
 	}
 
 	/***
@@ -115,9 +115,9 @@ public class Chapter06 extends TemplateMethod {
 	 */
 	@Override
 	public void implementionSix(String[] args) throws Exception {
-		System.out.println(("" + (byte) 100 + "_" + (short) 1000 + "_"
+		logger.debug(("" + (byte) 100 + "_" + (short) 1000 + "_"
 				+ (int) 1000000 + "_" + (long) 9000000000L + "_" + 'z'));
-		System.out.println("Done!");
+		logger.debug("Done!");
 
 	}
 
@@ -127,12 +127,12 @@ public class Chapter06 extends TemplateMethod {
 	@Override
 	public void implementionSeven(String[] args) throws Exception {
 		String s = "ab";
-		System.out.println((s += "cde"));
-		System.out.println((s += 12));
+		logger.debug((s += "cde"));
+		logger.debug((s += 12));
 		String[] vs = new String[1];
 		vs[0] = s;
-		System.out.println((vs[0] += "cde"));
-		System.out.println("Done!");
+		logger.debug((vs[0] += "cde"));
+		logger.debug("Done!");
 
 	}
 
@@ -143,12 +143,12 @@ public class Chapter06 extends TemplateMethod {
 	public void implementionEight(String[] args) throws Exception {
 		Object o = new RuntimeException("re-");
 		Object o2 = o;
-		System.out.println(("" + (o2 += "zz")));
+		logger.debug(("" + (o2 += "zz")));
 
 		Object[] vo = new Object[1];
 		vo[0] = o;
-		System.out.println((vo[0] += "cde"));
-		System.out.println("Done!");
+		logger.debug((vo[0] += "cde"));
+		logger.debug("Done!");
 
 	}
 

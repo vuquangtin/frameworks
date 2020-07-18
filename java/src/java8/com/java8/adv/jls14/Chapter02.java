@@ -19,90 +19,90 @@ public class Chapter02 extends TemplateMethod {
 
 	@Override
 	public void implementionOne(String[] args) throws Exception {
-		System.out.println("Decimal long literals:");
-		System.out.print(0L);
-		System.out.print(" ");
-		System.out.print(12L);
-		System.out.print(" ");
-		System.out.print(12345678900l);
-		System.out.print(" ");
-		System.out.println(12345678900L);
-		System.out.print("Long not overflow, 2002001001L + 2002001001L = ");
-		System.out.println((2002001001L + 2002001001L));
-		System.out.print("long extremes: ");
-		System.out.print(-9223372036854775808L);
-		System.out.print(" ");
-		System.out.println(9223372036854775807L);
-		System.out.println("Done!");
+		logger.debug("Decimal long literals:");
+		logger.debug(0L);
+		logger.debug(" ");
+		logger.debug(12L);
+		logger.debug(" ");
+		logger.debug(12345678900l);
+		logger.debug(" ");
+		logger.debug(12345678900L);
+		logger.debug("Long not overflow, 2002001001L + 2002001001L = ");
+		logger.debug((2002001001L + 2002001001L));
+		logger.debug("long extremes: ");
+		logger.debug(-9223372036854775808L);
+		logger.debug(" ");
+		logger.debug(9223372036854775807L);
+		logger.debug("Done!");
 
 	}
 
 	@Override
 	public void implementionTwo(String[] args) throws Exception {
-		System.out.println("Hexa int literals:");
-		System.out.print(0x0);
-		System.out.print(" ");
-		System.out.print(0x5f);
-		System.out.print(" ");
-		System.out.print(0X5F);
-		System.out.print(" ");
-		System.out.println(0xFFFFFFF0);
-		System.out.print("Hexa int overflow, 0x70000000 + 0x70000000 = ");
-		System.out.println((0x70000000 + 0x70000000));
-		System.out.print("int extremes: ");
-		System.out.print(0x80000000);
-		System.out.print(" ");
-		System.out.println(0x7fffffff);
-		System.out.println("Hexa long literals:");
-		System.out.print(0x0L);
-		System.out.print(" ");
-		System.out.print(0x123456789abL);
-		System.out.print(" ");
-		System.out.print(0x123456789ABl);
-		System.out.print(" ");
-		System.out.print(0xFFFFFFF0L);
-		System.out.print(" ");
-		System.out.println(0xFFFFFFFF00000000L);
+		logger.debug("Hexa int literals:");
+		logger.debug(0x0);
+		logger.debug(" ");
+		logger.debug(0x5f);
+		logger.debug(" ");
+		logger.debug(0X5F);
+		logger.debug(" ");
+		logger.debug(0xFFFFFFF0);
+		logger.debug("Hexa int overflow, 0x70000000 + 0x70000000 = ");
+		logger.debug((0x70000000 + 0x70000000));
+		logger.debug("int extremes: ");
+		logger.debug(0x80000000);
+		logger.debug(" ");
+		logger.debug(0x7fffffff);
+		logger.debug("Hexa long literals:");
+		logger.debug(0x0L);
+		logger.debug(" ");
+		logger.debug(0x123456789abL);
+		logger.debug(" ");
+		logger.debug(0x123456789ABl);
+		logger.debug(" ");
+		logger.debug(0xFFFFFFF0L);
+		logger.debug(" ");
+		logger.debug(0xFFFFFFFF00000000L);
 		System.out
 				.print("Hexa long not overflow, 0x70000000L + 0x70000000L = ");
-		System.out.println((0x70000000L + 0x70000000L));
-		System.out.print("long extremes: ");
-		System.out.print(0x8000000000000000L);
-		System.out.print(" ");
-		System.out.println(0x7fffffffffffffffL);
-		System.out.println("Done!");
+		logger.debug((0x70000000L + 0x70000000L));
+		logger.debug("long extremes: ");
+		logger.debug(0x8000000000000000L);
+		logger.debug(" ");
+		logger.debug(0x7fffffffffffffffL);
+		logger.debug("Done!");
 
 	}
 
 	// Octal integer literals
 	@Override
 	public void implementionThree(String[] args) throws Exception {
-		System.out.println("Octa int literals:");
-		System.out.print(00);
-		System.out.print(" ");
-		System.out.print(077);
-		System.out.print(" ");
-		System.out.println(037777777777);
-		System.out.print("Octa int overflow, 017777777777 + 017777777777 = ");
-		System.out.println((017777777777 + 017777777777));
-		System.out.print("int extremes: ");
-		System.out.print(020000000000);
-		System.out.print(" ");
-		System.out.println(017777777777);
-		System.out.println("Octa long literals:");
-		System.out.print(00L);
-		System.out.print(" ");
-		System.out.print(037777777777l);
-		System.out.print(" ");
-		System.out.println(01777777777777777777777L);
+		logger.debug("Octa int literals:");
+		logger.debug(00);
+		logger.debug(" ");
+		logger.debug(077);
+		logger.debug(" ");
+		logger.debug(037777777777);
+		logger.debug("Octa int overflow, 017777777777 + 017777777777 = ");
+		logger.debug((017777777777 + 017777777777));
+		logger.debug("int extremes: ");
+		logger.debug(020000000000);
+		logger.debug(" ");
+		logger.debug(017777777777);
+		logger.debug("Octa long literals:");
+		logger.debug(00L);
+		logger.debug(" ");
+		logger.debug(037777777777l);
+		logger.debug(" ");
+		logger.debug(01777777777777777777777L);
 		System.out
 				.print("Octa long not overflow, 017777777777L + 017777777777L = ");
-		System.out.println((017777777777L + 017777777777L));
-		System.out.print("long extremes: ");
-		System.out.print(01000000000000000000000L);
-		System.out.print(" ");
-		System.out.println(0777777777777777777777L);
-		System.out.println("Done!");
+		logger.debug((017777777777L + 017777777777L));
+		logger.debug("long extremes: ");
+		logger.debug(01000000000000000000000L);
+		logger.debug(" ");
+		logger.debug(0777777777777777777777L);
+		logger.debug("Done!");
 
 	}
 
@@ -116,9 +116,9 @@ public class Chapter02 extends TemplateMethod {
 	public void implementionFour(String[] args) throws Exception {
 		boolean t = true;
 		boolean f = false;
-		System.out.println(t);
-		System.out.println(f);
-		System.out.println("Done!");
+		logger.debug(t);
+		logger.debug(f);
+		logger.debug("Done!");
 
 	}
 
@@ -130,21 +130,21 @@ public class Chapter02 extends TemplateMethod {
 	 */
 	@Override
 	public void implementionFive(String[] args) throws Exception {
-		System.out.println("Standart single char literals:");
-		System.out.print("");
-		System.out.print('a');
-		System.out.print('A');
-		System.out.print('0');
-		System.out.print(' ');
-		System.out.println('#');// aA0 #
-		System.out.println("Single chars, same as in named escapes:");
-		System.out.print("");
-		System.out.print('b');
-		System.out.print('t');
-		System.out.print('n');
-		System.out.print('f');
-		System.out.println('r');
-		System.out.println("Done!");
+		logger.debug("Standart single char literals:");
+		logger.debug("");
+		logger.debug('a');
+		logger.debug('A');
+		logger.debug('0');
+		logger.debug(' ');
+		logger.debug('#');// aA0 #
+		logger.debug("Single chars, same as in named escapes:");
+		logger.debug("");
+		logger.debug('b');
+		logger.debug('t');
+		logger.debug('n');
+		logger.debug('f');
+		logger.debug('r');
+		logger.debug("Done!");
 
 	}
 
@@ -157,53 +157,53 @@ public class Chapter02 extends TemplateMethod {
 	 */
 	@Override
 	public void implementionSix(String[] args) throws Exception {
-		System.out.println("Named escape:");
-		System.out.print("");
-		System.out.print('\b');
-		System.out.print('\t');
-		System.out.print('\n');
-		System.out.print('\f');
-		System.out.print('\r');
-		System.out.print('\"');
-		System.out.println('\'' + '\\');
-		System.out.println("Octal escape of simple chars:");
-		System.out.print("");
-		System.out.print('\141');
-		System.out.print('\101');
-		System.out.print('\60');
-		System.out.print('\40');
-		System.out.println('\43');// aA0 #
-		System.out.println("Unicode escape of simple chars:");
-		System.out.print("");
-		System.out.print('\u0061');
-		System.out.print('\u0041');
-		System.out.print('\u0030');
-		System.out.print('\u0020');
-		System.out.println('\u0023');// aA0 #
+		logger.debug("Named escape:");
+		logger.debug("");
+		logger.debug('\b');
+		logger.debug('\t');
+		logger.debug('\n');
+		logger.debug('\f');
+		logger.debug('\r');
+		logger.debug('\"');
+		logger.debug('\'' + '\\');
+		logger.debug("Octal escape of simple chars:");
+		logger.debug("");
+		logger.debug('\141');
+		logger.debug('\101');
+		logger.debug('\60');
+		logger.debug('\40');
+		logger.debug('\43');// aA0 #
+		logger.debug("Unicode escape of simple chars:");
+		logger.debug("");
+		logger.debug('\u0061');
+		logger.debug('\u0041');
+		logger.debug('\u0030');
+		logger.debug('\u0020');
+		logger.debug('\u0023');// aA0 #
 
-		System.out.println("Octal escape:");
-		System.out.print("");
-		System.out.print('\0');
-		System.out.print('\7');
-		System.out.print('\00');
-		System.out.print('\07');
-		System.out.print('\37');
-		System.out.print('\77');
-		System.out.print('\000');
-		System.out.print('\007');
-		System.out.print('\077');
-		System.out.println('\177');
-		System.out.print("Octal escape 0, 127, again: ");
-		System.out.print('\0');
-		System.out.println('\177');
-		System.out.println("Unicode escape:");
-		System.out.print("");
-		System.out.print('\u0000');
-		System.out.print('\u0001');
-		System.out.print('\uu0007');
-		System.out.print('\u0010');
-		System.out.println('\uuu007f');
-		System.out.println("Done!");
+		logger.debug("Octal escape:");
+		logger.debug("");
+		logger.debug('\0');
+		logger.debug('\7');
+		logger.debug('\00');
+		logger.debug('\07');
+		logger.debug('\37');
+		logger.debug('\77');
+		logger.debug('\000');
+		logger.debug('\007');
+		logger.debug('\077');
+		logger.debug('\177');
+		logger.debug("Octal escape 0, 127, again: ");
+		logger.debug('\0');
+		logger.debug('\177');
+		logger.debug("Unicode escape:");
+		logger.debug("");
+		logger.debug('\u0000');
+		logger.debug('\u0001');
+		logger.debug('\uu0007');
+		logger.debug('\u0010');
+		logger.debug('\uuu007f');
+		logger.debug("Done!");
 
 	}
 
@@ -215,17 +215,17 @@ public class Chapter02 extends TemplateMethod {
 	 */
 	@Override
 	public void implementionSeven(String[] args) throws Exception {
-		System.out.println("Empty string:");
-		System.out.println("");
-		System.out.println("Simple chars string:");
-		System.out.println("aA0 #");
-		System.out.println("Names escape only:");
-		System.out.println("\\");
-		System.out.println("two named escapes:");
-		System.out.println("\"\\");
-		System.out.println("Chars and escapes together:");
-		System.out.println("_\\\'_<>");
-		System.out.println("Done!");
+		logger.debug("Empty string:");
+		logger.debug("");
+		logger.debug("Simple chars string:");
+		logger.debug("aA0 #");
+		logger.debug("Names escape only:");
+		logger.debug("\\");
+		logger.debug("two named escapes:");
+		logger.debug("\"\\");
+		logger.debug("Chars and escapes together:");
+		logger.debug("_\\\'_<>");
+		logger.debug("Done!");
 
 	}
 
@@ -238,49 +238,49 @@ public class Chapter02 extends TemplateMethod {
 	 */
 	@Override
 	public void implementionEight(String[] args) throws Exception {
-		System.out.println("Named escape:");
-		System.out.print("");
-		System.out.print("_\b_");
-		System.out.print("_\t_");
-		System.out.print("_\n_");
-		System.out.print("_\f_");
-		System.out.print("_\r_");
-		System.out.println("_\"_" + "_\'_" + "_\\_");
-		System.out.println("Octal escape of simple chars:");
-		System.out.print("");
-		System.out.print("_\141_");
-		System.out.print("_\101_");
-		System.out.print("_\60_");
-		System.out.print("_\40_");
-		System.out.println("_\43_");// aA0 #
-		System.out.println("Unicode escape of simple chars:");
-		System.out.print("");
-		System.out.print("_\u0061_");
-		System.out.print("_\u0041_");
-		System.out.print("_\u0030_");
-		System.out.print("_\u0020_");
-		System.out.println("_\u0023_");// aA0 #
+		logger.debug("Named escape:");
+		logger.debug("");
+		logger.debug("_\b_");
+		logger.debug("_\t_");
+		logger.debug("_\n_");
+		logger.debug("_\f_");
+		logger.debug("_\r_");
+		logger.debug("_\"_" + "_\'_" + "_\\_");
+		logger.debug("Octal escape of simple chars:");
+		logger.debug("");
+		logger.debug("_\141_");
+		logger.debug("_\101_");
+		logger.debug("_\60_");
+		logger.debug("_\40_");
+		logger.debug("_\43_");// aA0 #
+		logger.debug("Unicode escape of simple chars:");
+		logger.debug("");
+		logger.debug("_\u0061_");
+		logger.debug("_\u0041_");
+		logger.debug("_\u0030_");
+		logger.debug("_\u0020_");
+		logger.debug("_\u0023_");// aA0 #
 
-		System.out.println("Octal escape:");
-		System.out.print("");
-		System.out.print("_\0_");
-		System.out.print("_\7_");
-		System.out.print("_\00_");
-		System.out.print("_\07_");
-		System.out.print("_\37_");
-		System.out.print("_\77_");
-		System.out.print("_\000_");
-		System.out.print("_\007_");
-		System.out.print("_\077_");
-		System.out.println("_\177_");
-		System.out.println("Unicode escape:");
-		System.out.print("");
-		System.out.print("_\u0000_");
-		System.out.print("_\u0001_");
-		System.out.print("_\uu0007_");
-		System.out.print("_\u0010_");
-		System.out.println("_\uuu007f_");
-		System.out.println("Done!");
+		logger.debug("Octal escape:");
+		logger.debug("");
+		logger.debug("_\0_");
+		logger.debug("_\7_");
+		logger.debug("_\00_");
+		logger.debug("_\07_");
+		logger.debug("_\37_");
+		logger.debug("_\77_");
+		logger.debug("_\000_");
+		logger.debug("_\007_");
+		logger.debug("_\077_");
+		logger.debug("_\177_");
+		logger.debug("Unicode escape:");
+		logger.debug("");
+		logger.debug("_\u0000_");
+		logger.debug("_\u0001_");
+		logger.debug("_\uu0007_");
+		logger.debug("_\u0010_");
+		logger.debug("_\uuu007f_");
+		logger.debug("Done!");
 
 	}
 
@@ -294,9 +294,9 @@ public class Chapter02 extends TemplateMethod {
 	@Override
 	public void implementionNine(String[] args) throws Exception {
 		A a = null;
-		System.out.print("");
-		System.out.println(a);
-		System.out.println("Done!");
+		logger.debug("");
+		logger.debug(a);
+		logger.debug("Done!");
 
 	}
 
