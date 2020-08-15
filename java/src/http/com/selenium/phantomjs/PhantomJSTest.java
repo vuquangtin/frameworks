@@ -43,7 +43,7 @@ public class PhantomJSTest {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		driver.navigate().to("https://selenium.dev//");// Launch URL
+		driver.navigate().to("https://selenium.dev/");// Launch URL
 
 		File scrFile1 = ((TakesScreenshot) driver)
 				.getScreenshotAs(OutputType.FILE);
